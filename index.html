@@ -12,12 +12,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
 
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2250%22 fill=%22%23020617%22></circle><text y=%22.9em%22 x=%2250%%22 text-anchor=%22middle%22 font-size=%2245%22 fill=%22%23fff%22 font-family=%22Space Grotesk, sans-serif%22>SRD</text></svg>">
+
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Sai Rajesh Donkana — AI PM × FinTech" />
   <meta property="og:description" content="Minimal portfolio linking passion projects: UK Loan & Investment Visualizer, Mafia Night App, AI Itinerary Crafter." />
   <meta property="og:url" content="https://sairajesh711.github.io" />
-  <meta property="og:image" content="https://sairajesh711.github.io/og.png" />
+  <meta property="og:image" content="https://sairajesh711.github.io/og-banner.png" />
 
   <!-- JSON-LD -->
   <script type="application/ld+json">
@@ -116,6 +119,11 @@
       user-select: none;
       padding-right: 1em;
       animation: roll 40s linear infinite;
+    }
+    @media (max-width: 500px) {
+      .hero-background-text span {
+        font-size: clamp(40px, 12vw, 100px);
+      }
     }
 
     /* ---- Grid cards ---- */
@@ -221,7 +229,7 @@
       <div>
         <a href="#projects">Projects</a>
         <a href="#about">About</a>
-        <a href="https://www.linkedin.com/in/sairajeshdonkana" target="_blank" rel="noopener noreferrer">Contact</a>
+        <a href="#contact">Contact</a>
       </div>
     </nav>
   </header>
@@ -290,7 +298,7 @@
           </div>
           <div id="journey-citi" class="journey-step">
             <h3>The Foundation: Building at Scale</h3>
-            <p>This curiosity led me to <strong>Citi</strong>, where I spent three years as a software developer. I moved from theory to practice, building an ML model that prevented over trade failures and developing data visualization tools for capital markets operations. This experience taught me how to translate complex technical solutions into tangible business impact.</p>
+            <p>This curiosity led me to <strong>Citi</strong>, where I spent three years as a software developer. I moved from theory to practice, building an ML model that prevented over 100k trade failures (saving an estimated <strong>$8M+ annually</strong>) and developing data visualization tools for capital markets operations. This experience taught me how to translate complex technical solutions into tangible business impact.</p>
           </div>
           <div id="journey-iim" class="journey-step">
             <h3>The Bridge: From "How" to "Why"</h3>
@@ -318,9 +326,25 @@
         </article>
       </div>
     </section>
+
+    <section id="contact" class="section animated" style="animation-delay: 0.7s;" aria-label="Contact">
+      <h2>Get in Touch</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Email</h3>
+          <p>The best way to reach me for any inquiries or collaborations.</p>
+          <a class="btn" href="mailto:sairajesh711@gmail.com">sairajesh711@gmail.com →</a>
+        </article>
+        <article class="card">
+          <h3>Resume</h3>
+          <p>For a more detailed look at my professional experience, feel free to view my resume.</p>
+          <a class="btn" href="./Sai_Rajesh_Donkana_CV.pdf" target="_blank" rel="noopener">View CV →</a>
+        </article>
+      </div>
+    </section>
   </main>
 
-  <footer class="animated" style="animation-delay: 0.7s;">
+  <footer class="animated" style="animation-delay: 0.8s;">
     <div class="container footer-content">
       <small>© <span id="year"></span> Sai Rajesh Donkana • London</small>
       <div class="footer-links">
@@ -330,6 +354,9 @@
       </div>
     </div>
   </footer>
+
+  <!-- Analytics -->
+  <script defer data-domain="yourdomain.com" src="https://plausible.io/js/script.js"></script>
 
   <script>
     // Set footer year
