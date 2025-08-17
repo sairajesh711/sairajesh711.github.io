@@ -57,10 +57,10 @@
     .animated { animation: fade-in .5s ease forwards; }
     @keyframes fade-in { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
     @keyframes roll {
-      from { transform: translateX(100%); }
+      from { transform: translateX(0); }
       to { transform: translateX(-100%); }
     }
-    html,body{ margin:0; padding:0 }
+    html,body{ margin:0; padding:0; scroll-behavior: smooth; }
     body{
       font-family: var(--font-sans);
       background:var(--bg); color:var(--fg); line-height:1.6;
@@ -74,6 +74,16 @@
     nav{ display:flex; align-items:center; justify-content:space-between; gap:var(--s4); max-width:var(--max); margin:0 auto; padding: var(--s3) var(--s6); }
     nav a{ padding: var(--s2) var(--s3); border-radius:10px; font-weight: 500; }
     nav a:focus-visible{ outline:2px solid var(--brand); outline-offset:2px }
+    @media (max-width: 640px) {
+      nav {
+        flex-direction: column;
+        gap: var(--s3);
+      }
+      nav > div {
+        display: flex;
+        gap: var(--s2);
+      }
+    }
 
     /* ---- Hero ---- */
     .hero{ position: relative; overflow: hidden; padding: var(--s12) var(--s6) var(--s8); text-align: center; }
@@ -94,6 +104,7 @@
       z-index: 0;
       white-space: nowrap;
       overflow: hidden;
+      display: flex;
     }
     .hero-background-text span {
       display: inline-block;
@@ -103,7 +114,7 @@
       opacity: 0.04;
       pointer-events: none;
       user-select: none;
-      padding-right: 1em; /* Add space between repeated text */
+      padding-right: 1em;
       animation: roll 40s linear infinite;
     }
 
@@ -166,8 +177,8 @@
   <main id="main" class="container">
     <section class="hero animated" aria-label="Intro">
       <div class="hero-background-text" aria-hidden="true">
-        <span>AI · Sustainability · FinTech · Empathy · Strategy ·</span>
-        <span>AI · Sustainability · FinTech · Empathy · Strategy ·</span>
+        <span>AI · Tech · FinTech · Empathy · Strategy ·</span>
+        <span>AI · Tech · FinTech · Empathy · Strategy ·</span>
       </div>
       <div class="hero-content">
         <span class="pill">AI Product Manager with a FinTech Background</span>
@@ -193,7 +204,7 @@
             <h3>Mafia Night App</h3>
             <p>A real-time social game host that automates the chaos of remote Mafia, focusing on seamless session management and a slick UI.</p>
           </div>
-          <a class="btn" href="https://github.com/sairajesh711/mafia-lite" target="_blank" rel="noopener">View Repo →</a>
+          <a class="btn" href="https://github.com/sairajesh711/mafia-night-app" target="_blank" rel="noopener">View Repo →</a>
         </article>
         <!-- Project 3 -->
         <article class="card animated" style="animation-delay: 0.3s;">
@@ -201,7 +212,7 @@
             <h3>AI Itinerary Crafter</h3>
             <p>A travel co-pilot that helps users build the perfect AI prompt through a guided UI, turning vague ideas into detailed, personalized plans.</p>
           </div>
-          <a class="btn" href="https://github.com/sairajesh711/ai-itinerary" target="_blank" rel="noopener">View Repo →</a>
+          <a class="btn" href="https://github.com/sairajesh711/ai-itinerary-crafter" target="_blank" rel="noopener">View Repo →</a>
         </article>
       </div>
     </section>
@@ -210,9 +221,9 @@
       <h2>My Journey</h2>
       <div class="about-grid">
         <div>
-            <p>My path into product began not in a business school, but in an engineering lab at <strong>NIT Trichy</strong>, fascinated by neural networks. This curiosity for how data could shape outcomes led me to <strong>Citi</strong>, where I spent three years as a software developer, building ML models and data visualization tools for capital markets.</p>
-            <p>While I loved the technical challenge, I was driven to get closer to the "why." I wanted to understand the user problems we were solving and the business strategy behind the code. This led me to an MBA at <strong>IIM Bangalore</strong> and a hands-on product role at the AI startup <strong>RagaAI</strong>, where I learned to operate with startup agility—conducting market research, mapping customer journeys, and collaborating on design.</p>
-            <p>Today, as a Product Manager at <strong>JPMorgan Chase</strong> in London, I bring these worlds together, leading the development of enterprise-scale lending products for the UK market. It's a role that combines my technical foundation, my strategic training, and my passion for building things that make a real-world impact.</p>
+            <p>My path into product began not in a business school, but during my engineering at <strong>NIT Trichy</strong>, fascinated by data and technology and participating in ideation contests. This curiosity for how data could shape outcomes led me to <strong>Citi</strong>, where I spent three years as a software developer, building ML models and data visualization tools for capital markets operations.</p>
+            <p>While I loved the technical challenge, I was driven to get closer to the "why." I wanted to understand the user problems we were solving and the business strategy behind the code. This led me to an MBA at <strong>IIM Bangalore</strong> and a hands-on product role at the AI startup <strong>RagaAI</strong>, where I learned to operate with startup agility, conducting market research, mapping customer journeys, and collaborating on design.</p>
+            <p>Today, as a Product Manager at <strong>JPMorgan Chase</strong> in London, I'm a key contributor to their UK retail lending products. My focus is on shaping the future of personal loans, and I have also contributed significantly to their credit card offering, combining my technical foundation with strategic product thinking.</p>
         </div>
         <div class="card animated" style="animation-delay: 0.5s;">
             <h3>Beyond the PRD</h3>
