@@ -6,12 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="AI Product Manager in London. FinTech lending, ML/MLOps, and builder of small, legible projects." />
   <meta name="theme-color" content="#ffffff" />
+
+  <!-- Google Fonts: Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Sai Rajesh Donkana — AI PM × FinTech" />
   <meta property="og:description" content="Minimal portfolio linking passion projects: UK Loan & Investment Visualizer, Mafia Night App, AI Itinerary Crafter." />
   <meta property="og:url" content="https://sairajesh711.github.io" />
   <meta property="og:image" content="https://sairajesh711.github.io/og.png" />
+
   <!-- JSON-LD -->
   <script type="application/ld+json">
   {
@@ -28,79 +35,128 @@
     ]
   }
   </script>
+
   <style>
     /* ---- Design tokens ---- */
     :root{
-      --bg:#fff; --fg:#0f172a; --muted:#475569; --brand:#2563eb; --brand-ink:#0b3a91;
+      --bg:#fff; --fg:#0f172a; --muted:#475569; --brand:#2563eb;
       --card:#f8fafc; --border:#e5e7eb;
       --max: 960px; --radius:14px;
       --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s6:24px; --s8:32px; --s12:48px;
+      --font-sans: 'Space Grotesk', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
     }
     @media (prefers-color-scheme: dark){
       :root{
-        --bg:#0b1020; --fg:#e6edf3; --muted:#9aa4b2; --brand:#60a5fa; --brand-ink:#1d4ed8;
-        --card:#0f172a; --border:#1f2937;
+        --bg:#020617; --fg:#e2e8f0; --muted:#94a3b8; --brand:#60a5fa;
+        --card:#0f172a; --border:#1e293b;
       }
     }
-    /* ---- Base ---- */
-    *{ box-sizing:border-box }
+
+    /* ---- Base & Animation ---- */
+    *, *::before, *::after { box-sizing:border-box; }
+    .animated { animation: fade-in .5s ease forwards; }
+    @keyframes fade-in { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes roll {
+      from { transform: translateX(100%); }
+      to { transform: translateX(-100%); }
+    }
     html,body{ margin:0; padding:0 }
     body{
-      font-family: system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;
+      font-family: var(--font-sans);
       background:var(--bg); color:var(--fg); line-height:1.6;
+      font-weight: 400;
     }
     a{ color:var(--brand); text-decoration:none }
-    a:hover{ text-decoration:underline }
+    a:hover{ text-decoration:underline; text-decoration-thickness: 1.5px; }
     .container{ max-width:var(--max); margin:0 auto; padding: var(--s6); }
     header, main, footer{ width:100% }
-    header{ position:sticky; top:0; backdrop-filter:saturate(180%) blur(6px); background:color-mix(in oklab, var(--bg) 85%, transparent); border-bottom:1px solid var(--border); }
+    header{ position:sticky; top:0; z-index: 10; backdrop-filter:saturate(180%) blur(6px); background:color-mix(in oklab, var(--bg) 85%, transparent); border-bottom:1px solid var(--border); }
     nav{ display:flex; align-items:center; justify-content:space-between; gap:var(--s4); max-width:var(--max); margin:0 auto; padding: var(--s3) var(--s6); }
-    nav a{ padding: var(--s2) var(--s3); border-radius:10px }
-    nav a:focus{ outline:2px solid var(--brand); outline-offset:2px }
+    nav a{ padding: var(--s2) var(--s3); border-radius:10px; font-weight: 500; }
+    nav a:focus-visible{ outline:2px solid var(--brand); outline-offset:2px }
+
     /* ---- Hero ---- */
-    .hero{ padding: var(--s12) var(--s6) var(--s8); }
-    .hero h1{ margin:0 0 var(--s2); font-size: clamp(28px, 5vw, 40px); line-height:1.2; }
-    .hero p{ margin:0; color:var(--muted) }
+    .hero{ position: relative; overflow: hidden; padding: var(--s12) var(--s6) var(--s8); text-align: center; }
+    .hero-content { position: relative; z-index: 1; }
+    .hero h1{ margin:0 0 var(--s2); font-size: clamp(32px, 5vw, 48px); line-height:1.1; font-weight: 700; letter-spacing: -1.5px; }
+    .hero p{ margin: var(--s4) auto 0; color:var(--muted); max-width: 600px; font-size: 18px; }
     .pill{
-      display:inline-block; padding: var(--s2) var(--s3);
-      border:1px solid var(--border); border-radius:999px; font-size:14px; color:var(--muted);
-      margin-right:var(--s2);
+      display:inline-block; padding: var(--s1) var(--s3);
+      border:1px solid var(--border); border-radius:999px; font-size:14px; font-weight: 500; color:var(--muted);
+      margin-bottom: var(--s4);
     }
+    .hero-background-text {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      transform: translateY(-50%);
+      z-index: 0;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    .hero-background-text span {
+      display: inline-block;
+      font-size: clamp(60px, 15vw, 150px);
+      font-weight: 700;
+      color: var(--fg);
+      opacity: 0.04;
+      pointer-events: none;
+      user-select: none;
+      padding-right: 1em; /* Add space between repeated text */
+      animation: roll 40s linear infinite;
+    }
+
     /* ---- Grid cards ---- */
-    .grid{ display:grid; gap:var(--s6); grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); }
+    .grid{ display:grid; gap:var(--s6); grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); }
     .card{
       background:var(--card); border:1px solid var(--border); border-radius: var(--radius);
-      padding: var(--s6); min-height: 180px; display:flex; flex-direction:column; justify-content:space-between;
-      transition: transform .12s ease;
+      padding: var(--s6); display:flex; flex-direction:column; justify-content:space-between;
+      transition: transform .15s ease, box-shadow .15s ease;
     }
-    .card:focus-within, .card:hover{ transform: translateY(-2px) }
-    .card h3{ margin:0 0 var(--s2); font-size:18px }
-    .card p{ margin:0 0 var(--s4); color:var(--muted) }
+    .card:focus-within, .card:hover{ transform: translateY(-4px); box-shadow: 0 4px 12px color-mix(in oklab, var(--border) 30%, transparent); }
+    .card h3{ margin:0 0 var(--s2); font-size:18px; font-weight: 500; }
+    .card p{ margin:0 0 var(--s4); color:var(--muted); font-size: 15px; }
     .btn{
       align-self:flex-start; display:inline-block; padding: var(--s2) var(--s4);
       border:1px solid var(--border); border-radius:10px; text-decoration:none;
-      background:linear-gradient(to bottom right, color-mix(in oklab, var(--brand) 15%, transparent), transparent);
+      font-weight: 500;
+      background:color-mix(in oklab, var(--card) 50%, var(--bg));
       color:var(--fg);
     }
-    .btn:hover{ background:linear-gradient(to bottom right, color-mix(in oklab, var(--brand) 25%, transparent), transparent) }
+    .btn:hover{ background:var(--card); border-color: color-mix(in oklab, var(--muted) 50%, transparent); }
     .section{ padding: var(--s8) var(--s6) }
+    .section h2 { text-align: center; font-size: 24px; font-weight: 700; letter-spacing: -0.5px; margin-bottom: var(--s8); }
     .muted{ color:var(--muted) }
+
+    /* ---- About Section ---- */
+    .about-grid { display: grid; grid-template-columns: 1fr; gap: var(--s8); align-items: center; }
+    @media (min-width: 768px) { .about-grid { grid-template-columns: 2fr 1fr; } }
+    .about-grid p { margin-bottom: var(--s4); }
+
+    /* ---- Footer ---- */
     footer{ border-top:1px solid var(--border); }
-    /* ---- Accessibility niceties ---- */
-    @media (prefers-reduced-motion: reduce){ *{ transition:none !important; animation:none !important } }
-    .skip{ position:absolute; left:-9999px }
-    .skip:focus{ left:var(--s6); top:var(--s6); background:var(--card); padding:var(--s2) var(--s3); border-radius:8px; border:1px solid var(--border) }
+    .footer-content { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--s4); }
+    .footer-links { display: flex; gap: var(--s4); }
+
+    /* ---- Accessibility ---- */
+    @media (prefers-reduced-motion: reduce){ 
+      .hero-background-text span { animation: none; }
+      .animated { animation: none; }
+      *, *::before, *::after { transition: none !important; }
+    }
+    .skip{ position:absolute; left:-9999px; }
+    .skip:focus{ position: fixed; left:var(--s6); top:var(--s6); background:var(--card); padding:var(--s2) var(--s3); border-radius:8px; border:1px solid var(--border); z-index: 100; }
   </style>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
-  <header>
+  <header class="animated">
     <nav>
       <strong><a href="/">Sai Rajesh Donkana</a></strong>
       <div>
         <a href="#projects">Projects</a>
-        <a href="#writing">Writing</a>
         <a href="#about">About</a>
         <a href="https://www.linkedin.com/in/sairajeshdonkana" target="_blank" rel="noopener noreferrer">Contact</a>
       </div>
@@ -108,70 +164,78 @@
   </header>
 
   <main id="main" class="container">
-    <section class="hero" aria-label="Intro">
-      <span class="pill">AI PM × FinTech</span>
-      <h1>Builder of small, legible products.</h1>
-      <p>Enterprise lending background, startup speed, ML/MLOps fluency. I ship design-first tools and tidy experiments.</p>
+    <section class="hero animated" aria-label="Intro">
+      <div class="hero-background-text" aria-hidden="true">
+        <span>AI · Sustainability · FinTech · Empathy · Strategy ·</span>
+        <span>AI · Sustainability · FinTech · Empathy · Strategy ·</span>
+      </div>
+      <div class="hero-content">
+        <span class="pill">AI Product Manager with a FinTech Background</span>
+        <h1>Empathetic Products. Sustainable Strategy. Technical Depth.</h1>
+        <p>My work is about translating powerful technology into valuable products, grounded in deep user understanding and a curiosity for what's next.</p>
+      </div>
     </section>
 
     <section id="projects" class="section" aria-label="Projects">
-      <h2>Projects</h2>
+      <h2 class="animated">Passion Projects</h2>
       <div class="grid">
         <!-- Project 1 -->
-        <article class="card">
+        <article class="card animated" style="animation-delay: 0.1s;">
           <div>
             <h3>UK Loan &amp; Investment Visualizer</h3>
-            <p>Design-first tool showing trade-offs between overpaying debt vs investing the same cash. Charts, microcopy, a11y.</p>
+            <p>A design-first tool that answers a crucial financial question: "Should I overpay my loan or invest the extra cash?"</p>
           </div>
-          <div>
-            
-            <a class="btn" href="https://github.com/sairajesh711/uk-loan-visualizer" target="_blank" rel="noopener">View repo →</a>
-          </div>
+          <a class="btn" href="https://github.com/sairajesh711/uk-loan-visualizer" target="_blank" rel="noopener">View Repo →</a>
         </article>
         <!-- Project 2 -->
-        <article class="card">
+        <article class="card animated" style="animation-delay: 0.2s;">
           <div>
             <h3>Mafia Night App</h3>
-            <p>Real-time social deduction host: lobby creation, role reveals, synchronized day/night cycle. Chaos-free remote play.</p>
+            <p>A real-time social game host that automates the chaos of remote Mafia, focusing on seamless session management and a slick UI.</p>
           </div>
-          <div>
-            
-            <a class="btn" href="https://github.com/sairajesh711/mafia-lite" target="_blank" rel="noopener">View repo →</a>
-          </div>
+          <a class="btn" href="https://github.com/sairajesh711/mafia-lite" target="_blank" rel="noopener">View Repo →</a>
         </article>
         <!-- Project 3 -->
-        <article class="card">
+        <article class="card animated" style="animation-delay: 0.3s;">
           <div>
             <h3>AI Itinerary Crafter</h3>
-            <p>Prompt co-pilot for travel: vibe selectors + guided inputs → structured, day-by-day itineraries you can edit and share.</p>
+            <p>A travel co-pilot that helps users build the perfect AI prompt through a guided UI, turning vague ideas into detailed, personalized plans.</p>
           </div>
-          <div>
-            
-            <a class="btn" href="https://github.com/sairajesh711/ai-itinerary" target="_blank" rel="noopener">View repo →</a>
-          </div>
+          <a class="btn" href="https://github.com/sairajesh711/ai-itinerary" target="_blank" rel="noopener">View Repo →</a>
         </article>
       </div>
     </section>
 
-    <section id="writing" class="section" aria-label="Writing">
-      <h2>Writing</h2>
-      <p class="muted">Short case studies coming soon: launch adoption patterns, A/B testing, explainable ML for eligibility.</p>
-    </section>
-
-    <section id="about" class="section" aria-label="About">
-      <h2>About</h2>
-      <p>I bridge engineering and product strategy. Earlier: ML tooling at Citi → startup PM at RagaAI → MBA at IIM Bangalore → lending @ JPMorgan, London. I build in public with a focus on clarity, a11y, and speed.</p>
+    <section id="about" class="section animated" style="animation-delay: 0.4s;" aria-label="About">
+      <h2>My Journey</h2>
+      <div class="about-grid">
+        <div>
+            <p>My path into product began not in a business school, but in an engineering lab at <strong>NIT Trichy</strong>, fascinated by neural networks. This curiosity for how data could shape outcomes led me to <strong>Citi</strong>, where I spent three years as a software developer, building ML models and data visualization tools for capital markets.</p>
+            <p>While I loved the technical challenge, I was driven to get closer to the "why." I wanted to understand the user problems we were solving and the business strategy behind the code. This led me to an MBA at <strong>IIM Bangalore</strong> and a hands-on product role at the AI startup <strong>RagaAI</strong>, where I learned to operate with startup agility—conducting market research, mapping customer journeys, and collaborating on design.</p>
+            <p>Today, as a Product Manager at <strong>JPMorgan Chase</strong> in London, I bring these worlds together, leading the development of enterprise-scale lending products for the UK market. It's a role that combines my technical foundation, my strategic training, and my passion for building things that make a real-world impact.</p>
+        </div>
+        <div class="card animated" style="animation-delay: 0.5s;">
+            <h3>Beyond the PRD</h3>
+            <p>When I'm not deep in product specs or market analysis, I'm probably planning my next trip or creating content for Instagram. It's my creative outlet—a space for travel, singing, dancing, and storytelling.</p>
+            <a class="btn" href="https://www.instagram.com/the.backpacking.fakir" target="_blank" rel="noopener">Follow on Instagram →</a>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <div class="container">
-      <small>© <span id="year"></span> Raj • London • <a href="https://github.com/sairajesh711" target="_blank" rel="noopener">GitHub</a></small>
+  <footer class="animated" style="animation-delay: 0.6s;">
+    <div class="container footer-content">
+      <small>© <span id="year"></span> Sai Rajesh Donkana • London</small>
+      <div class="footer-links">
+        <a href="https://github.com/sairajesh711" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/sairajeshdonkana" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://x.com/iamsairajesh711" target="_blank" rel="noopener">X</a>
+      </div>
     </div>
   </footer>
 
   <script>
-    // small enhancement: current year for footer
+    // Set footer year
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
