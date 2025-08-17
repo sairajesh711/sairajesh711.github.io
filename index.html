@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Sai Rajesh Donkana — AI PM × FinTech</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="AI Product Manager in London. FinTech lending, ML/MLOps, and builder of small, legible projects." />
+  <meta name="theme-color" content="#ffffff" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Sai Rajesh Donkana — AI PM × FinTech" />
+  <meta property="og:description" content="Minimal portfolio linking passion projects: UK Loan & Investment Visualizer, Mafia Night App, AI Itinerary Crafter." />
+  <meta property="og:url" content="https://sairajesh711.github.io" />
+  <meta property="og:image" content="https://sairajesh711.github.io/og.png" />
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sai Rajesh Donkana",
+    "jobTitle": "AI Product Manager",
+    "url": "https://sairajesh711.github.io",
+    "sameAs": [
+      "https://github.com/sairajesh711",
+      "https://www.linkedin.com/in/sairajeshdonkana",
+      "https://x.com/iamsairajesh711",
+      "https://www.instagram.com/the.backpacking.fakir"
+    ]
+  }
+  </script>
+  <style>
+    /* ---- Design tokens ---- */
+    :root{
+      --bg:#fff; --fg:#0f172a; --muted:#475569; --brand:#2563eb; --brand-ink:#0b3a91;
+      --card:#f8fafc; --border:#e5e7eb;
+      --max: 960px; --radius:14px;
+      --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s6:24px; --s8:32px; --s12:48px;
+    }
+    @media (prefers-color-scheme: dark){
+      :root{
+        --bg:#0b1020; --fg:#e6edf3; --muted:#9aa4b2; --brand:#60a5fa; --brand-ink:#1d4ed8;
+        --card:#0f172a; --border:#1f2937;
+      }
+    }
+    /* ---- Base ---- */
+    *{ box-sizing:border-box }
+    html,body{ margin:0; padding:0 }
+    body{
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;
+      background:var(--bg); color:var(--fg); line-height:1.6;
+    }
+    a{ color:var(--brand); text-decoration:none }
+    a:hover{ text-decoration:underline }
+    .container{ max-width:var(--max); margin:0 auto; padding: var(--s6); }
+    header, main, footer{ width:100% }
+    header{ position:sticky; top:0; backdrop-filter:saturate(180%) blur(6px); background:color-mix(in oklab, var(--bg) 85%, transparent); border-bottom:1px solid var(--border); }
+    nav{ display:flex; align-items:center; justify-content:space-between; gap:var(--s4); max-width:var(--max); margin:0 auto; padding: var(--s3) var(--s6); }
+    nav a{ padding: var(--s2) var(--s3); border-radius:10px }
+    nav a:focus{ outline:2px solid var(--brand); outline-offset:2px }
+    /* ---- Hero ---- */
+    .hero{ padding: var(--s12) var(--s6) var(--s8); }
+    .hero h1{ margin:0 0 var(--s2); font-size: clamp(28px, 5vw, 40px); line-height:1.2; }
+    .hero p{ margin:0; color:var(--muted) }
+    .pill{
+      display:inline-block; padding: var(--s2) var(--s3);
+      border:1px solid var(--border); border-radius:999px; font-size:14px; color:var(--muted);
+      margin-right:var(--s2);
+    }
+    /* ---- Grid cards ---- */
+    .grid{ display:grid; gap:var(--s6); grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); }
+    .card{
+      background:var(--card); border:1px solid var(--border); border-radius: var(--radius);
+      padding: var(--s6); min-height: 180px; display:flex; flex-direction:column; justify-content:space-between;
+      transition: transform .12s ease;
+    }
+    .card:focus-within, .card:hover{ transform: translateY(-2px) }
+    .card h3{ margin:0 0 var(--s2); font-size:18px }
+    .card p{ margin:0 0 var(--s4); color:var(--muted) }
+    .btn{
+      align-self:flex-start; display:inline-block; padding: var(--s2) var(--s4);
+      border:1px solid var(--border); border-radius:10px; text-decoration:none;
+      background:linear-gradient(to bottom right, color-mix(in oklab, var(--brand) 15%, transparent), transparent);
+      color:var(--fg);
+    }
+    .btn:hover{ background:linear-gradient(to bottom right, color-mix(in oklab, var(--brand) 25%, transparent), transparent) }
+    .section{ padding: var(--s8) var(--s6) }
+    .muted{ color:var(--muted) }
+    footer{ border-top:1px solid var(--border); }
+    /* ---- Accessibility niceties ---- */
+    @media (prefers-reduced-motion: reduce){ *{ transition:none !important; animation:none !important } }
+    .skip{ position:absolute; left:-9999px }
+    .skip:focus{ left:var(--s6); top:var(--s6); background:var(--card); padding:var(--s2) var(--s3); border-radius:8px; border:1px solid var(--border) }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header>
+    <nav>
+      <strong><a href="/">Sai Rajesh Donkana</a></strong>
+      <div>
+        <a href="#projects">Projects</a>
+        <a href="#writing">Writing</a>
+        <a href="#about">About</a>
+        <a href="https://www.linkedin.com/in/sairajeshdonkana" target="_blank" rel="noopener noreferrer">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main" class="container">
+    <section class="hero" aria-label="Intro">
+      <span class="pill">AI PM × FinTech</span>
+      <h1>Builder of small, legible products.</h1>
+      <p>Enterprise lending background, startup speed, ML/MLOps fluency. I ship design-first tools and tidy experiments.</p>
+    </section>
+
+    <section id="projects" class="section" aria-label="Projects">
+      <h2>Projects</h2>
+      <div class="grid">
+        <!-- Project 1 -->
+        <article class="card">
+          <div>
+            <h3>UK Loan &amp; Investment Visualizer</h3>
+            <p>Design-first tool showing trade-offs between overpaying debt vs investing the same cash. Charts, microcopy, a11y.</p>
+          </div>
+          <div>
+            
+            <a class="btn" href="https://github.com/sairajesh711/uk-loan-visualizer" target="_blank" rel="noopener">View repo →</a>
+          </div>
+        </article>
+        <!-- Project 2 -->
+        <article class="card">
+          <div>
+            <h3>Mafia Night App</h3>
+            <p>Real-time social deduction host: lobby creation, role reveals, synchronized day/night cycle. Chaos-free remote play.</p>
+          </div>
+          <div>
+            
+            <a class="btn" href="https://github.com/sairajesh711/mafia-lite" target="_blank" rel="noopener">View repo →</a>
+          </div>
+        </article>
+        <!-- Project 3 -->
+        <article class="card">
+          <div>
+            <h3>AI Itinerary Crafter</h3>
+            <p>Prompt co-pilot for travel: vibe selectors + guided inputs → structured, day-by-day itineraries you can edit and share.</p>
+          </div>
+          <div>
+            
+            <a class="btn" href="https://github.com/sairajesh711/ai-itinerary" target="_blank" rel="noopener">View repo →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="writing" class="section" aria-label="Writing">
+      <h2>Writing</h2>
+      <p class="muted">Short case studies coming soon: launch adoption patterns, A/B testing, explainable ML for eligibility.</p>
+    </section>
+
+    <section id="about" class="section" aria-label="About">
+      <h2>About</h2>
+      <p>I bridge engineering and product strategy. Earlier: ML tooling at Citi → startup PM at RagaAI → MBA at IIM Bangalore → lending @ JPMorgan, London. I build in public with a focus on clarity, a11y, and speed.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <small>© <span id="year"></span> Raj • London • <a href="https://github.com/sairajesh711" target="_blank" rel="noopener">GitHub</a></small>
+    </div>
+  </footer>
+
+  <script>
+    // small enhancement: current year for footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
