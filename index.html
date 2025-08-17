@@ -140,10 +140,62 @@
     .section h2 { text-align: center; font-size: 24px; font-weight: 700; letter-spacing: -0.5px; margin-bottom: var(--s8); }
     .muted{ color:var(--muted) }
 
-    /* ---- About Section ---- */
-    .about-grid { display: grid; grid-template-columns: 1fr; gap: var(--s8); align-items: center; }
-    @media (min-width: 768px) { .about-grid { grid-template-columns: 2fr 1fr; } }
-    .about-grid p { margin-bottom: var(--s4); }
+    /* ---- Journey Section ---- */
+    .journey-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: var(--s2);
+      margin-bottom: var(--s8);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: var(--s4);
+    }
+    .journey-tab {
+      padding: var(--s2) var(--s4);
+      border: none;
+      background: transparent;
+      color: var(--muted);
+      font-family: var(--font-sans);
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: all 0.2s ease;
+    }
+    .journey-tab.active {
+      color: var(--fg);
+      background: var(--card);
+    }
+    .journey-arrow {
+      color: var(--border);
+      display: block;
+      margin: 0 var(--s1);
+    }
+    @media (max-width: 768px) {
+      .journey-arrow {
+        display: none;
+      }
+    }
+    .journey-content {
+      position: relative;
+      min-height: 250px; /* Adjust as needed */
+    }
+    .journey-step {
+      position: absolute;
+      width: 100%;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.4s ease, visibility 0.4s;
+    }
+    .journey-step.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    .journey-step h3 {
+      margin-top: 0;
+      font-size: 20px;
+    }
 
     /* ---- Footer ---- */
     footer{ border-top:1px solid var(--border); }
@@ -153,7 +205,7 @@
     /* ---- Accessibility ---- */
     @media (prefers-reduced-motion: reduce){ 
       .hero-background-text span { animation: none; }
-      .animated { animation: none; }
+      .animated, .journey-step { animation: none; opacity: 1; transform: none; }
       *, *::before, *::after { transition: none !important; }
     }
     .skip{ position:absolute; left:-9999px; }
@@ -219,22 +271,56 @@
 
     <section id="about" class="section animated" style="animation-delay: 0.4s;" aria-label="About">
       <h2>My Journey</h2>
-      <div class="about-grid">
-        <div>
-            <p>My path into product began not in a business school, but during my engineering at <strong>NIT Trichy</strong>, fascinated by data and technology and participating in ideation contests. This curiosity for how data could shape outcomes led me to <strong>Citi</strong>, where I spent three years as a software developer, building ML models and data visualization tools for capital markets operations.</p>
-            <p>While I loved the technical challenge, I was driven to get closer to the "why." I wanted to understand the user problems we were solving and the business strategy behind the code. This led me to an MBA at <strong>IIM Bangalore</strong> and a hands-on product role at the AI startup <strong>RagaAI</strong>, where I learned to operate with startup agility, conducting market research, mapping customer journeys, and collaborating on design.</p>
-            <p>Today, as a Product Manager at <strong>JPMorgan Chase</strong> in London, I'm a key contributor to their UK retail lending products. My focus is on shaping the future of personal loans, and I have also contributed significantly to their credit card offering, combining my technical foundation with strategic product thinking.</p>
+      <div class="journey-container">
+        <div class="journey-tabs">
+          <button class="journey-tab active" data-target="journey-nit">NIT Trichy</button>
+          <div class="journey-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 16L18 12M18 12L14 8M18 12L6 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <button class="journey-tab" data-target="journey-citi">Citi</button>
+          <div class="journey-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 16L18 12M18 12L14 8M18 12L6 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <button class="journey-tab" data-target="journey-iim">IIM Bangalore</button>
+          <div class="journey-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 16L18 12M18 12L14 8M18 12L6 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <button class="journey-tab" data-target="journey-ragaai">RagaAI</button>
+          <div class="journey-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 16L18 12M18 12L14 8M18 12L6 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <button class="journey-tab" data-target="journey-jpmc">JPMorgan Chase</button>
         </div>
-        <div class="card animated" style="animation-delay: 0.5s;">
+        <div class="journey-content">
+          <div id="journey-nit" class="journey-step active">
+            <h3>The Spark: Engineering & Ideation</h3>
+            <p>My path into product began not in a business school, but during my engineering studies at <strong>NIT Trichy</strong>, fascinated by data, technology, and participating in ideation contests. This was my first taste of how technology could be shaped to solve interesting problems.</p>
+          </div>
+          <div id="journey-citi" class="journey-step">
+            <h3>The Foundation: Building at Scale</h3>
+            <p>This curiosity led me to <strong>Citi</strong>, where I spent three years as a software developer. I moved from theory to practice, building an ML model that prevented over trade failures and developing data visualization tools for capital markets operations. This experience taught me how to translate complex technical solutions into tangible business impact.</p>
+          </div>
+          <div id="journey-iim" class="journey-step">
+            <h3>The Bridge: From "How" to "Why"</h3>
+            <p>While I loved the technical challenge, I was driven to get closer to the "why." This led me to an MBA at <strong>IIM Bangalore</strong>. There, I honed my strategic thinking in national competitions, winning the <strong>HUL LIME</strong> ideathon by designing a gamified marketing strategy. I learned to build the strategic bridge between code and customer.</p>
+          </div>
+          <div id="journey-ragaai" class="journey-step">
+            <h3>The Accelerator: Startup Agility</h3>
+            <p>While pursuing my MBA, I worked part-time at the AI startup <strong>RagaAI</strong>, juggling academic work with real-world product challenges. I learned to operate with speed and agility—conducting market research, mapping customer journeys, and collaborating on design in a fast-paced environment.</p>
+          </div>
+          <div id="journey-jpmc" class="journey-step">
+            <h3>The Synthesis: Enterprise Impact</h3>
+            <p>Today, as a Product Manager at <strong>JPMorgan Chase</strong> in London, I'm a key contributor to their UK retail lending products. My focus is on shaping the future of personal loans, and I have also contributed significantly to their credit card offerings, combining my technical foundation with strategic product thinking.</p>
+          </div>
+        </div>
+      </div>
+      <div class="grid" style="margin-top: var(--s12);">
+        <article class="card animated" style="animation-delay: 0.5s;">
+            <h3>Mentorship & Leadership</h3>
+            <p>I'm passionate about helping others grow. I currently mentor new analysts at <strong>JPMorgan Chase</strong>, and previously mentored over 20 new hires at <strong>Citi</strong>. While at Citi, I also spearheaded an internal speaker series on emerging tech, drawing audiences of over 300 colleagues.</p>
+        </article>
+        <article class="card animated" style="animation-delay: 0.6s;">
             <h3>Beyond the PRD</h3>
-            <p>When I'm not deep in product specs or market analysis, I'm probably planning my next trip or creating content for Instagram. It's my creative outlet—a space for travel, singing, dancing, and storytelling.</p>
+            <p>When I'm not deep in product specs, I'm probably planning my next trip. My passion for astrophotography was even featured on <strong>Zostel's official Instagram page</strong> (485k+ reach). It's my creative outlet for travel, content creation, and storytelling.</p>
             <a class="btn" href="https://www.instagram.com/the.backpacking.fakir" target="_blank" rel="noopener">Follow on Instagram →</a>
-        </div>
+        </article>
       </div>
     </section>
   </main>
 
-  <footer class="animated" style="animation-delay: 0.6s;">
+  <footer class="animated" style="animation-delay: 0.7s;">
     <div class="container footer-content">
       <small>© <span id="year"></span> Sai Rajesh Donkana • London</small>
       <div class="footer-links">
@@ -248,6 +334,30 @@
   <script>
     // Set footer year
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Interactive Journey Tabs Logic
+    document.addEventListener('DOMContentLoaded', () => {
+      const tabsContainer = document.querySelector('.journey-tabs');
+      const tabs = document.querySelectorAll('.journey-tab');
+      const steps = document.querySelectorAll('.journey-step');
+
+      tabsContainer.addEventListener('click', (e) => {
+        const clickedTab = e.target.closest('.journey-tab');
+        if (!clickedTab) return;
+
+        // Deactivate all tabs and steps
+        tabs.forEach(tab => tab.classList.remove('active'));
+        steps.forEach(step => step.classList.remove('active'));
+
+        // Activate the clicked tab and corresponding step
+        clickedTab.classList.add('active');
+        const targetId = clickedTab.dataset.target;
+        const targetStep = document.getElementById(targetId);
+        if (targetStep) {
+          targetStep.classList.add('active');
+        }
+      });
+    });
   </script>
 </body>
 </html>
