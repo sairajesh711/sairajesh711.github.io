@@ -43,7 +43,9 @@
   <meta http-equiv="Content-Security-Policy" content="
     default-src 'self';
     img-src 'self' https://*.goatcounter.com data:;
-    script-src 'self' https://gc.zgo.at https://*.goatcounter.com;
+    script-src 'self' https://gc.zgo.at https://*.goatcounter.com
+      'sha256-lh0l56vi0+nTvjVG7nM15olbVCpoctPJp3UrMGh2rcA='
+      'sha256-oQy6tiUAHJkBbDoBiZXfHcOrvkrWehghuIbhd5iyglo=';
     style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
     font-src https://fonts.gstatic.com;
     connect-src https://sairajesh711.goatcounter.com;
@@ -365,7 +367,11 @@
     </div>
   </footer>
 
-  <!-- GoatCounter (free, cookieless) -->
+  <!-- Core application scripts -->
+  <script defer src="/js/app.js"></script>
+  <script defer src="/js/analytics.js"></script>
+
+  <!-- GoatCounter configuration and loader -->
   <script>
     window.goatcounter = window.goatcounter || {};
     window.goatcounter.allow_local = false; 
@@ -373,106 +379,5 @@
   <script data-goatcounter="https://sairajesh711.goatcounter.com/count"
           async src="https://gc.zgo.at/count.js"></script>
   <noscript><img src="https://sairajesh711.goatcounter.com/count?p=/noscript" alt="" /></noscript>
-
-  <script>
-    // Set footer year
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Interactive Journey Tabs Logic + GoatCounter Events
-    document.addEventListener('DOMContentLoaded', () => {
-      const tabsContainer = document.querySelector('.journey-tabs');
-      const tabs = document.querySelectorAll('.journey-tab');
-      const steps = document.querySelectorAll('.journey-step');
-
-      tabsContainer.addEventListener('click', (e) => {
-        const clickedTab = e.target.closest('.journey-tab');
-        if (!clickedTab) return;
-
-        // Track journey tab click
-        if (window.goatcounter && window.goatcounter.count) {
-          window.goatcounter.count({
-            path: '/event/journey-tab',
-            title: `Journey Tab: ${clickedTab.textContent}`,
-            event: true,
-          });
-        }
-
-        // Deactivate all tabs and steps
-        tabs.forEach(tab => tab.classList.remove('active'));
-        steps.forEach(step => step.classList.remove('active'));
-
-        // Activate the clicked tab and corresponding step
-        clickedTab.classList.add('active');
-        const targetId = clickedTab.dataset.target;
-        const targetStep = document.getElementById(targetId);
-        if (targetStep) {
-          targetStep.classList.add('active');
-        }
-      });
-
-      // Track CTA clicks (project repo buttons)
-      document.querySelectorAll('a[href*="github.com"]').forEach(link => {
-        link.addEventListener('click', () => {
-          if (window.goatcounter && window.goatcounter.count) {
-            window.goatcounter.count({
-              path: '/event/cta-click',
-              title: `Repo Click: ${link.textContent}`,
-              event: true,
-            });
-          }
-        });
-      });
-
-      // Track email clicks
-      document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
-        link.addEventListener('click', () => {
-          if (window.goatcounter && window.goatcounter.count) {
-            window.goatcounter.count({
-              path: '/event/email-click',
-              title: 'Email Contact',
-              event: true,
-            });
-          }
-        });
-      });
-
-      // Track CV/Resume clicks
-      document.querySelectorAll('a[href*=".pdf"], a[href*="cv"], a[href*="resume"]').forEach(link => {
-        link.addEventListener('click', () => {
-          if (window.goatcounter && window.goatcounter.count) {
-            window.goatcounter.count({
-              path: '/event/resume-view',
-              title: 'CV/Resume Download',
-              event: true,
-            });
-          }
-        });
-      });
-
-      // Scroll depth tracking
-      let maxScroll = 0;
-      let scrollTimeout;
-      
-      window.addEventListener('scroll', () => {
-        clearTimeout(scrollTimeout);
-        scrollTimeout = setTimeout(() => {
-          const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
-          
-          // Track every 25% milestone, but only once
-          const milestone = Math.floor(scrollPercent / 25) * 25;
-          if (milestone > maxScroll && milestone >= 25) {
-            maxScroll = milestone;
-            if (window.goatcounter && window.goatcounter.count) {
-              window.goatcounter.count({
-                path: '/event/scroll-depth',
-                title: `Scrolled ${milestone}%`,
-                event: true,
-              });
-            }
-          }
-        }, 100);
-      });
-    });
-  </script>
 </body>
 </html>
