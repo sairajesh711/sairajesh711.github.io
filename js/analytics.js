@@ -2,12 +2,24 @@
 // Fire GoatCounter custom events once the counter is ready
 function gcReady(callback) {
   if (window.goatcounter?.count) return callback();
+  
+  const POLL_INTERVAL = 50; // ms
+  const TIMEOUT = 5000; // ms
+  let elapsed = 0;
+  
   const timer = setInterval(() => {
     if (window.goatcounter?.count) {
       clearInterval(timer);
       callback();
+    } else {
+      elapsed += POLL_INTERVAL;
+      if (elapsed >= TIMEOUT) {
+        clearInterval(timer);
+        // GoatCounter failed to load, but we continue silently
+        console.warn('GoatCounter failed to load within timeout period');
+      }
     }
-  }, 50);
+  }, POLL_INTERVAL);
 }
 
 function gcEvent(path, title, referrer) {
@@ -34,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Track project CTA clicks (GitHub repo buttons)
-    document.querySelectorAll('a.btn').forEach(link => {
+    document.querySelectorAll('.card a.btn').forEach(link => {
       link.addEventListener('click', () => {
         const card = link.closest('.card');
         const projectTitle = card?.querySelector('h3')?.textContent?.trim() || 'Unknown Project';

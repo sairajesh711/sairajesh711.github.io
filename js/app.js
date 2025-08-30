@@ -1,8 +1,10 @@
-// Set footer year
-document.getElementById('year').textContent = new Date().getFullYear();
-
 // Interactive Journey Tabs
 document.addEventListener('DOMContentLoaded', () => {
+  // Set footer year
+  const yearElem = document.getElementById('year');
+  if (yearElem) {
+    yearElem.textContent = new Date().getFullYear();
+  }
   const tabsContainer = document.querySelector('.journey-tabs');
   if (!tabsContainer) return;
   
