@@ -227,6 +227,9 @@
     .card code{ font-family: var(--font-sans); font-size:13px; background:color-mix(in oklab, var(--border) 60%, transparent); padding:2px 6px; border-radius:6px; word-break:break-all; }
     .card .actions{ display:flex; flex-direction:column; gap: var(--s3); }
     .card.wide{ grid-column: 1 / -1; }
+    .card .feature-list{ margin: 0 0 var(--s4); padding-left: 20px; color: var(--muted); font-size: 15px; }
+    .card .feature-list li{ margin-bottom: var(--s2); }
+    .card .feature-list strong{ color: var(--fg); font-weight: 500; }
     #pm .grid, #ai .grid{ grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); }
     .hero-cta{ display:flex; gap: var(--s3); justify-content:center; flex-wrap:wrap; margin-top: var(--s6); }
     .hero-cta .btn{ align-self:auto; }
@@ -405,11 +408,19 @@
       <h2 class="animated">Side Projects</h2>
       <p class="intro animated">Where I'm the PM and the designer, and with AI, the engineer too.</p>
       <div class="grid">
-        <article class="card animated" style="animation-delay: 0.1s;">
+        <article class="card wide animated" style="animation-delay: 0.1s;">
           <div>
             <span class="tag">Live with beta users</span>
             <h3>FPL Buddy</h3>
-            <p>A data product for Fantasy Premier League. It runs its own pipeline over seasons of public match data, projects every player's points each week, and turns that into advice for your actual team: line-up, captain, and whether a transfer is worth making or saving. Before anyone used it, the engine had to beat a simple baseline over a full past season.</p>
+            <p>A data product for Fantasy Premier League. It has its own pipeline over seasons of public match data, and an engine that does the thinking.</p>
+            <ul class="feature-list">
+              <li><strong>Projection engine:</strong> forecasts every player's points one source at a time (goals, assists, clean sheets, saves, bonus, cards). It had to beat a simple baseline over a full past season before anyone used it.</li>
+              <li><strong>Advice for your team:</strong> best line-up and captain, plus whether a transfer is worth making or saving, worked out across your whole squad.</li>
+              <li><strong>League advice:</strong> compares you with your mini-league rivals, and shows the safe pick next to the differential that could close the gap.</li>
+              <li><strong>Chip strategy:</strong> in progress. Chip timing has been backtested over two seasons to learn when each chip actually pays off.</li>
+              <li><strong>Football hypotheses, tested:</strong> every football belief is checked against past seasons before it changes the engine. Season-long form turned out to predict better than the last three weeks. A player's record against one opponent added nothing beyond his form.</li>
+              <li><strong>Gameweek reviews:</strong> the advice is checked against what actually happened, and the engine only changes on evidence.</li>
+            </ul>
           </div>
         </article>
         <article class="card animated" style="animation-delay: 0.2s;">
@@ -435,7 +446,7 @@
           </div>
           <a class="btn" href="https://ai-itinerary-frontend.vercel.app/" target="_blank" rel="noopener">Try it →</a>
         </article>
-        <article class="card wide animated" style="animation-delay: 0.4s;">
+        <article class="card animated" style="animation-delay: 0.4s;">
           <div>
             <span class="tag">Live</span>
             <h3>UK Loan &amp; Investment Visualizer</h3>
