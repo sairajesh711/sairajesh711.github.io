@@ -96,7 +96,9 @@
       }
       nav > div {
         display: flex;
-        gap: var(--s2);
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0 var(--s1);
       }
     }
 
@@ -225,7 +227,7 @@
     .card code{ font-family: var(--font-sans); font-size:13px; background:color-mix(in oklab, var(--border) 60%, transparent); padding:2px 6px; border-radius:6px; word-break:break-all; }
     .card .actions{ display:flex; flex-direction:column; gap: var(--s3); }
     .card.wide{ grid-column: 1 / -1; }
-    #ai .grid{ grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); }
+    #pm .grid, #ai .grid{ grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); }
     .hero-cta{ display:flex; gap: var(--s3); justify-content:center; flex-wrap:wrap; margin-top: var(--s6); }
     .hero-cta .btn{ align-self:auto; }
     .btn.primary{ background:var(--brand); border-color:var(--brand); color:#fff; }
@@ -259,6 +261,7 @@
       <strong><a href="/">Sai Rajesh Donkana</a></strong>
       <div>
         <a href="#experience">Experience</a>
+        <a href="#pm">How I Work</a>
         <a href="#projects">Projects</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
@@ -329,6 +332,49 @@
             <p>Somewhere in there I started building again. Nobody asked me to. I wanted to know whether these models could do the careful, boring parts of the job — reading regulation, checking that a requirement actually says what it's meant to say — so I built the tools and found out. More and more people use them now, and I'm working on turning them into official use cases and tools for users. One placed <strong>3rd in our line of business at the firm's AI hackathon</strong>, and an Operations team uses a loan simulator I built to settle customer disputes. The part I care about most is making them cheap enough to keep running.</p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section id="pm" class="section" aria-label="How I work as a PM">
+      <h2 class="animated">How I Work as a PM</h2>
+      <p class="intro animated">On my side projects, I use AI as a sparring partner that keeps a running log of my product calls, the good ones and the bad. These are the strengths it keeps coming back to.</p>
+      <div class="grid">
+        <article class="card animated" style="animation-delay: 0.1s;">
+          <div>
+            <h3>I reframe from how users think</h3>
+            <p>"You only get one free transfer a week" turned FPL Buddy's advice into a simple choice: make a move or save it. Later I rebuilt it around what managers actually come to ask, "what's wrong with my squad?", not "who should I buy?"</p>
+          </div>
+        </article>
+        <article class="card animated" style="animation-delay: 0.15s;">
+          <div>
+            <h3>I keep the measurement honest</h3>
+            <p>Judge advice on what actually happened, not on what users say they did. Share the misses as well as the wins. Write the quality bar for launch before seeing the results, not after.</p>
+          </div>
+        </article>
+        <article class="card animated" style="animation-delay: 0.2s;">
+          <div>
+            <h3>I let evidence overrule opinion, including mine</h3>
+            <p>I ask to see the data before accepting a finding, and I let a tested number replace a recommended one. On the values quiz I applied the sourcing bar to the tradition I personally care about most, and it lost its placement.</p>
+          </div>
+        </article>
+        <article class="card animated" style="animation-delay: 0.25s;">
+          <div>
+            <h3>I weigh feedback by who it comes from</h3>
+            <p>I stopped a redesign that rested on a single tester's view. Before building any screens, I tested the quiz's questions against viewpoints from across the political spectrum, and every round changed them.</p>
+          </div>
+        </article>
+        <article class="card animated" style="animation-delay: 0.3s;">
+          <div>
+            <h3>I keep scope tight</h3>
+            <p>I chose short, fixed summaries over an open chatbot, which took the riskiest item out of the first release. When a feature stopped earning its place, I cut it. Facts only, no predictions that could cost a user.</p>
+          </div>
+        </article>
+        <article class="card animated" style="animation-delay: 0.35s;">
+          <div>
+            <h3>I fix the system, not just the moment</h3>
+            <p>When I noticed process bloat and wasted tokens, I asked for a lasting fix, not a one-off. I asked for audits before anyone suggested one. I built a tool that explains every technical decision in terms of the customer journey.</p>
+          </div>
+        </article>
       </div>
     </section>
 
