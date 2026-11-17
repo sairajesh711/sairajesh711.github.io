@@ -2,34 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Sai Rajesh Donkana — AI PM × FinTech</title>
+  <title>Sai Rajesh Donkana — AI product strategy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="AI Product Manager in London. Owns UK lending products at Chase UK and builds agentic AI workflows — context engineering, evals, and small, legible projects." />
-  <meta name="theme-color" content="#ffffff" />
+  <meta name="description" content="AI product manager in London. SME for UK Personal Loans at JPMorgan Chase, and builder of AI products that are strict about where the model belongs." />
+  <meta name="theme-color" content="#F3F5F1" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#121815" media="(prefers-color-scheme: dark)" />
 
-  <!-- Google Fonts: Space Grotesk -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;1,7..72,400&family=Schibsted+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2250%22 fill=%22%23020617%22></circle><text y=%22.9em%22 x=%2250%%22 text-anchor=%22middle%22 font-size=%2245%22 fill=%22%23fff%22 font-family=%22Space Grotesk, sans-serif%22>SRD</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2218%22 fill=%22%230E6E5C%22/><text x=%2250%22 y=%2268%22 text-anchor=%22middle%22 font-size=%2252%22 font-weight=%22700%22 fill=%22%23F3F5F1%22 font-family=%22Arial, sans-serif%22>SR</text></svg>">
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Sai Rajesh Donkana — AI PM × FinTech" />
-  <meta property="og:description" content="Minimal portfolio linking passion projects: UK Loan & Investment Visualizer and AI Itinerary Crafter." />
-  <meta property="og:url" content="https://sairajesh711.github.io" />
+  <meta property="og:title" content="Sai Rajesh Donkana — AI product strategy" />
+  <meta property="og:description" content="I work out where AI belongs in a product, and where it doesn't. PM at JPMorgan Chase in London; builder of FPL Buddy, a values quiz and Project Architect." />
+  <meta property="og:url" content="https://sairajesh711.github.io/" />
   <meta property="og:image" content="https://sairajesh711.github.io/og-banner.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://sairajesh711.github.io/" />
 
-  <!-- JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Sai Rajesh Donkana",
     "jobTitle": "AI Product Manager",
-    "url": "https://sairajesh711.github.io",
+    "worksFor": { "@type": "Organization", "name": "JPMorgan Chase" },
+    "address": { "@type": "PostalAddress", "addressLocality": "London", "addressCountry": "GB" },
+    "url": "https://sairajesh711.github.io/",
     "sameAs": [
       "https://github.com/sairajesh711",
       "https://www.linkedin.com/in/sairajeshdonkana",
@@ -39,337 +40,383 @@
   }
   </script>
 
-  <!-- Content Security Policy -->
-  <meta http-equiv="Content-Security-Policy" content="
-    default-src 'self';
-    img-src 'self' https://*.goatcounter.com data:;
-    script-src 'self' https://gc.zgo.at https://*.goatcounter.com
-      'sha256-lh0l56vi0+nTvjVG7nM15olbVCpoctPJp3UrMGh2rcA='
-      'sha256-oQy6tiUAHJkBbDoBiZXfHcOrvkrWehghuIbhd5iyglo=';
-    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-    font-src https://fonts.gstatic.com;
-    connect-src https://sairajesh711.goatcounter.com;
-  ">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https://*.goatcounter.com data:; script-src 'self' https://gc.zgo.at https://*.goatcounter.com 'sha256-if8J1ZfE9pBKxth4R5LNfjV5QotpY6VX9N86toOx/Kg='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; connect-src https://sairajesh711.goatcounter.com; base-uri 'self'; form-action 'none'; object-src 'none'">
 
   <style>
-    /* ---- Design tokens ---- */
     :root{
-      --bg:#fff; --fg:#0f172a; --muted:#475569; --brand:#2563eb;
-      --card:#f8fafc; --border:#e5e7eb;
-      --max: 960px; --radius:14px;
-      --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s6:24px; --s8:32px; --s12:48px;
-      --font-sans: 'Space Grotesk', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      --paper:#F3F5F1;
+      --ink:#16201B;
+      --mute:#56635C;
+      --rule:#CCD4CE;
+      --signal:#0E6E5C;
+      --wash:#E4EAE5;
+      --display:'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif;
+      --text:'Literata', Georgia, 'Times New Roman', serif;
+      --max:1120px;
+      --gutter:clamp(20px, 4vw, 48px);
     }
     @media (prefers-color-scheme: dark){
       :root{
-        --bg:#020617; --fg:#e2e8f0; --muted:#94a3b8; --brand:#60a5fa;
-        --card:#0f172a; --border:#1e293b;
+        --paper:#121815; --ink:#E3E9E5; --mute:#97A49D; --rule:#2C3631;
+        --signal:#5CC7AE; --wash:#1A221E;
       }
     }
 
-    /* ---- Base & Animation ---- */
-    *, *::before, *::after { box-sizing:border-box; }
-    .animated { animation: fade-in .5s ease forwards; }
-    @keyframes fade-in { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
-    @keyframes roll {
-      from { transform: translateX(0); }
-      to { transform: translateX(-100%); }
-    }
-    html,body{ margin:0; padding:0; scroll-behavior: smooth; }
+    *,*::before,*::after{ box-sizing:border-box; }
+    html{ scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
     body{
-      font-family: var(--font-sans);
-      background:var(--bg); color:var(--fg); line-height:1.6;
-      font-weight: 400;
+      margin:0; background:var(--paper); color:var(--ink);
+      font-family:var(--text); font-size:18px; line-height:1.65;
+      font-optical-sizing:auto;
     }
-    a{ color:var(--brand); text-decoration:none }
-    a:hover{ text-decoration:underline; text-decoration-thickness: 1.5px; }
-    .container{ max-width:var(--max); margin:0 auto; padding: var(--s6); }
-    header, main, footer{ width:100% }
-    header{ position:sticky; top:0; z-index: 10; backdrop-filter:saturate(180%) blur(6px); background:color-mix(in oklab, var(--bg) 85%, transparent); border-bottom:1px solid var(--border); }
-    nav{ display:flex; align-items:center; justify-content:space-between; gap:var(--s4); max-width:var(--max); margin:0 auto; padding: var(--s3) var(--s6); }
-    nav a{ padding: var(--s2) var(--s3); border-radius:10px; font-weight: 500; }
-    nav a:focus-visible{ outline:2px solid var(--brand); outline-offset:2px }
-    @media (max-width: 640px) {
-      nav {
-        flex-direction: column;
-        gap: var(--s3);
-      }
-      nav > div {
-        display: flex;
-        gap: var(--s2);
-      }
-    }
+    a{ color:var(--signal); text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:3px; }
+    a:hover{ text-decoration-thickness:2px; }
+    :focus-visible{ outline:2px solid var(--signal); outline-offset:3px; border-radius:2px; }
+    p{ margin:0 0 1em; }
+    h1,h2,h3{ font-family:var(--display); margin:0; font-weight:700; }
 
-    /* ---- Hero ---- */
-    .hero{ position: relative; overflow: hidden; padding: var(--s12) var(--s6) var(--s8); text-align: center; }
-    .hero-content { position: relative; z-index: 1; }
-    .hero h1{ margin:0 0 var(--s2); font-size: clamp(32px, 5vw, 48px); line-height:1.1; font-weight: 700; letter-spacing: -1.5px; }
-    .hero p{ margin: var(--s4) auto 0; color:var(--muted); max-width: 600px; font-size: 18px; }
-    .pill{
-      display:inline-block; padding: var(--s1) var(--s3);
-      border:1px solid var(--border); border-radius:999px; font-size:14px; font-weight: 500; color:var(--muted);
-      margin-bottom: var(--s4);
-    }
-    .hero-background-text {
-      position: absolute;
-      top: 50%;
-      left: 0;
-      width: 100%;
-      transform: translateY(-50%);
-      z-index: 0;
-      white-space: nowrap;
-      overflow: hidden;
-      display: flex;
-    }
-    .hero-background-text span {
-      display: inline-block;
-      font-size: clamp(60px, 15vw, 150px);
-      font-weight: 700;
-      color: var(--fg);
-      opacity: 0.04;
-      pointer-events: none;
-      user-select: none;
-      padding-right: 1em;
-      animation: roll 40s linear infinite;
-    }
-    @media (max-width: 500px) {
-      .hero-background-text span {
-        font-size: clamp(40px, 12vw, 100px);
-      }
-    }
-
-    /* ---- Grid cards ---- */
-    .grid{ display:grid; gap:var(--s6); grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); }
-    .card{
-      background:var(--card); border:1px solid var(--border); border-radius: var(--radius);
-      padding: var(--s6); display:flex; flex-direction:column; justify-content:space-between;
-      transition: transform .15s ease, box-shadow .15s ease;
-    }
-    .card:focus-within, .card:hover{ transform: translateY(-4px); box-shadow: 0 4px 12px color-mix(in oklab, var(--border) 30%, transparent); }
-    .card h3{ margin:0 0 var(--s2); font-size:18px; font-weight: 500; }
-    .card p{ margin:0 0 var(--s4); color:var(--muted); font-size: 15px; }
-    .btn{
-      align-self:flex-start; display:inline-block; padding: var(--s2) var(--s4);
-      border:1px solid var(--border); border-radius:10px; text-decoration:none;
-      font-weight: 500;
-      background:color-mix(in oklab, var(--card) 50%, var(--bg));
-      color:var(--fg);
-    }
-    .btn:hover{ background:var(--card); border-color: color-mix(in oklab, var(--muted) 50%, transparent); }
-    .section{ padding: var(--s8) var(--s6) }
-    .section h2 { text-align: center; font-size: 24px; font-weight: 700; letter-spacing: -0.5px; margin-bottom: var(--s8); }
-    .muted{ color:var(--muted) }
-
-    /* ---- Journey Section ---- */
-    .journey-tabs {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      gap: var(--s2);
-      margin-bottom: var(--s8);
-      border-bottom: 1px solid var(--border);
-      padding-bottom: var(--s4);
-    }
-    .journey-tab {
-      padding: var(--s2) var(--s4);
-      border: none;
-      background: transparent;
-      color: var(--muted);
-      font-family: var(--font-sans);
-      font-size: 16px;
-      font-weight: 500;
-      cursor: pointer;
-      border-radius: 8px;
-      transition: all 0.2s ease;
-    }
-    .journey-tab.active {
-      color: var(--fg);
-      background: var(--card);
-    }
-    .journey-arrow {
-      color: var(--border);
-      display: block;
-      margin: 0 var(--s1);
-    }
-    @media (max-width: 768px) {
-      .journey-arrow {
-        display: none;
-      }
-    }
-    .journey-content {
-      display: grid; /* stack steps in one cell so the panel grows to the tallest */
-    }
-    .journey-step {
-      grid-area: 1 / 1;
-      width: 100%;
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.4s ease, visibility 0.4s;
-    }
-    .journey-step.active {
-      opacity: 1;
-      visibility: visible;
-    }
-    .journey-step h3 {
-      margin-top: 0;
-      font-size: 20px;
-    }
-
-    /* ---- Footer ---- */
-    footer{ border-top:1px solid var(--border); }
-    .footer-content { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--s4); }
-    .footer-links { display: flex; gap: var(--s4); }
-
-    /* ---- Accessibility ---- */
-    @media (prefers-reduced-motion: reduce){ 
-      .hero-background-text span { animation: none; }
-      .animated, .journey-step { animation: none; opacity: 1; transform: none; }
-      *, *::before, *::after { transition: none !important; }
-    }
     .skip{ position:absolute; left:-9999px; }
-    .skip:focus{ position: fixed; left:var(--s6); top:var(--s6); background:var(--card); padding:var(--s2) var(--s3); border-radius:8px; border:1px solid var(--border); z-index: 100; }
+    .skip:focus{ left:var(--gutter); top:12px; background:var(--paper); padding:8px 12px; border:1px solid var(--ink); z-index:10; }
+
+    .wrap{ max-width:var(--max); margin:0 auto; padding:0 var(--gutter); }
+
+    /* Site bar */
+    .bar{ display:flex; justify-content:space-between; align-items:baseline; gap:24px; padding:28px 0 0; font-family:var(--display); font-size:15px; }
+    .bar .me{ font-weight:700; color:var(--ink); text-decoration:none; letter-spacing:-.01em; }
+    .bar nav{ display:flex; gap:22px; flex-wrap:wrap; }
+    .bar nav a{ color:var(--mute); text-decoration:none; font-weight:500; }
+    .bar nav a:hover{ color:var(--ink); }
+
+    /* Hero */
+    .hero{ padding:clamp(56px, 9vw, 120px) 0 clamp(56px, 8vw, 96px); }
+    .hero h1{
+      font-size:clamp(40px, 7vw, 100px); line-height:.95; letter-spacing:-.045em; font-weight:800;
+    }
+    .hero h1 .line{ display:block; }
+    @media (min-width: 640px){ .hero h1 .line{ white-space:nowrap; } }
+    .hero h1 .quiet{ color:var(--mute); font-weight:700; }
+    .hero .lede{ display:grid; grid-template-columns:repeat(12, 1fr); gap:0 24px; margin-top:clamp(36px, 5vw, 56px); }
+    .hero .lede p{ grid-column:5 / span 7; font-size:clamp(18px, 1.6vw, 21px); max-width:60ch; }
+    .hero .lede p.view{ color:var(--mute); font-style:italic; }
+
+    /* Sections: margin column + content column */
+    .sec{ display:grid; grid-template-columns:repeat(12, 1fr); gap:0 24px; padding:clamp(56px, 8vw, 104px) 0; border-top:1px solid var(--rule); }
+    .sec > .side{ grid-column:1 / span 3; }
+    .sec > .main{ grid-column:5 / span 8; }
+    .sec h2{ font-size:22px; letter-spacing:-.015em; position:sticky; top:24px; }
+    .sec .side p{ font-family:var(--display); font-size:15px; color:var(--mute); margin-top:10px; max-width:24ch; position:sticky; top:60px; }
+
+    /* Rules */
+    .rule{ display:grid; grid-template-columns:repeat(8, 1fr); gap:0 24px; padding:0 0 44px; }
+    .rule + .rule{ padding-top:44px; border-top:1px solid var(--rule); }
+    .rule h3{ grid-column:1 / span 8; font-size:clamp(28px, 3.4vw, 40px); line-height:1.08; letter-spacing:-.03em; font-weight:700; margin-bottom:16px; max-width:20ch; }
+    .rule p{ grid-column:1 / span 6; color:var(--ink); max-width:58ch; margin:0; }
+    .rule cite{ grid-column:7 / span 2; font-style:normal; font-family:var(--display); font-size:14px; line-height:1.4; color:var(--signal); padding-top:4px; border-top:2px solid var(--signal); align-self:start; }
+
+    /* Projects */
+    .proj{ padding:0 0 56px; }
+    .proj + .proj{ padding-top:56px; border-top:1px solid var(--rule); }
+    .proj header{ display:flex; flex-wrap:wrap; align-items:baseline; gap:8px 16px; margin-bottom:10px; }
+    .proj h3{ font-size:clamp(30px, 3.6vw, 44px); letter-spacing:-.035em; line-height:1; font-weight:800; }
+    .status{ font-family:var(--display); font-size:14px; font-weight:600; color:var(--signal); border:1.5px solid currentColor; border-radius:999px; padding:2px 10px; white-space:nowrap; }
+    .proj .what{ font-size:clamp(19px, 1.7vw, 22px); max-width:46ch; margin-bottom:24px; }
+    .proj dl{ display:grid; grid-template-columns:9.5rem 1fr; gap:14px 24px; margin:0 0 20px; }
+    .proj dt{ font-family:var(--display); font-weight:600; font-size:15px; color:var(--mute); padding-top:3px; }
+    .proj dd{ margin:0; max-width:58ch; }
+    .proj .links{ font-family:var(--display); font-size:15px; font-weight:600; display:flex; flex-wrap:wrap; gap:8px 24px; }
+    code{ font-family:var(--display); font-size:.88em; background:var(--wash); padding:2px 6px; border-radius:4px; }
+    .facts{ display:flex; flex-wrap:wrap; gap:6px 22px; font-family:var(--display); font-size:15px; color:var(--mute); margin:0 0 18px; padding:0; list-style:none; }
+    .facts strong{ color:var(--ink); font-weight:700; }
+
+    /* Shelf */
+    .shelf{ list-style:none; margin:0; padding:0; }
+    .shelf li{ display:grid; grid-template-columns:repeat(8, 1fr); gap:6px 24px; padding:22px 0; border-top:1px solid var(--rule); }
+    .shelf li:first-child{ border-top:0; padding-top:0; }
+    .shelf .name{ grid-column:1 / span 3; font-family:var(--display); font-weight:700; font-size:19px; letter-spacing:-.01em; line-height:1.3; }
+    .shelf .name small{ display:block; font-weight:500; font-size:14px; color:var(--mute); letter-spacing:0; margin-top:2px; }
+    .shelf p{ grid-column:4 / span 5; margin:0; }
+
+    /* Career */
+    .path{ list-style:none; margin:0; padding:0; position:relative; }
+    .path li{ position:relative; padding:0 0 36px 32px; }
+    .path li::before{ content:""; position:absolute; left:4px; top:12px; bottom:-12px; width:2px; background:var(--rule); }
+    .path li:last-child::before{ display:none; }
+    .path li::after{ content:""; position:absolute; left:0; top:8px; width:10px; height:10px; border-radius:50%; background:var(--paper); border:2px solid var(--signal); }
+    .path li:first-child::after{ background:var(--signal); }
+    .path h3{ font-size:21px; letter-spacing:-.015em; }
+    .path .role{ font-family:var(--display); font-size:15px; color:var(--mute); margin:2px 0 10px; }
+    .path p{ max-width:60ch; }
+
+    /* Beyond + contact */
+    .two{ display:grid; grid-template-columns:1fr 1fr; gap:24px 48px; }
+    .two h3{ font-size:19px; margin-bottom:8px; letter-spacing:-.01em; }
+    .reach{ font-family:var(--display); font-size:clamp(26px, 3.4vw, 40px); font-weight:700; letter-spacing:-.03em; line-height:1.15; margin:0 0 20px; }
+    .reach a{ text-decoration-thickness:2px; text-underline-offset:6px; }
+    .elsewhere{ display:flex; flex-wrap:wrap; gap:8px 28px; font-family:var(--display); font-weight:600; font-size:16px; }
+
+    footer{ border-top:1px solid var(--rule); padding:28px 0 40px; font-family:var(--display); font-size:14px; color:var(--mute); }
+
+    /* One page-load moment: the headline sets line by line */
+    @media (prefers-reduced-motion: no-preference){
+      .hero h1 .line{ opacity:0; transform:translateY(.25em); animation:set .7s cubic-bezier(.2,.7,.2,1) forwards; }
+      .hero h1 .line:nth-child(2){ animation-delay:.12s; }
+      .hero h1 .line:nth-child(3){ animation-delay:.24s; }
+      .hero h1 .line:nth-child(4){ animation-delay:.36s; }
+      @keyframes set{ to{ opacity:1; transform:none; } }
+    }
+
+    @media (max-width: 860px){
+      body{ font-size:17px; }
+      .hero .lede p{ grid-column:1 / -1; }
+      .sec > .side, .sec > .main{ grid-column:1 / -1; }
+      .sec h2, .sec .side p{ position:static; }
+      .sec > .side{ margin-bottom:32px; }
+      .rule h3, .rule p, .rule cite{ grid-column:1 / -1; }
+      .rule cite{ margin-top:16px; justify-self:start; padding-right:12px; }
+      .shelf .name, .shelf p{ grid-column:1 / -1; }
+      .two{ grid-template-columns:1fr; }
+    }
+    @media (max-width: 520px){
+      .bar{ flex-direction:column; gap:10px; }
+      .proj dl{ grid-template-columns:1fr; gap:2px; }
+      .proj dd{ margin-bottom:12px; }
+    }
   </style>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
-  <header class="animated">
-    <nav>
-      <strong><a href="/">Sai Rajesh Donkana</a></strong>
-      <div>
-        <a href="#projects">Projects</a>
-        <a href="#about">About</a>
+  <div class="wrap">
+    <div class="bar">
+      <a class="me" href="/">Sai Rajesh Donkana</a>
+      <nav aria-label="Sections">
+        <a href="#rules">How I build</a>
+        <a href="#now">Building now</a>
+        <a href="#work">Work</a>
         <a href="#contact">Contact</a>
-      </div>
-    </nav>
-  </header>
+      </nav>
+    </div>
+  </div>
 
-  <main id="main" class="container">
-    <section class="hero animated" aria-label="Intro">
-      <div class="hero-background-text" aria-hidden="true">
-        <span>AI · Tech · FinTech · Empathy · Strategy ·</span>
-        <span>AI · Tech · FinTech · Empathy · Strategy ·</span>
-      </div>
-      <div class="hero-content">
-        <span class="pill">AI Product Manager with a FinTech Background</span>
-        <h1>Empathetic Products. Sustainable Strategy. Technical Depth.</h1>
-        <p>I started in engineering, got restless about why we were building things rather than how, and ended up in product. I still build things myself — it's the quickest way to find out whether an idea is any good. Outside work it's travel and astrophotography, which is the same itch pointed at a darker sky.</p>
+  <main id="main" class="wrap">
+    <section class="hero" aria-label="Introduction">
+      <h1>
+        <span class="line">I work out</span>
+        <span class="line">where AI belongs</span>
+        <span class="line">in a product.</span>
+        <span class="line quiet">And where it doesn't.</span>
+      </h1>
+      <div class="lede">
+        <p>Product manager at JPMorgan Chase in London, and the firm's SME for UK Personal Loans. Outside work I build AI products end to end, because finding out what a model can actually do is quicker than arguing about it.</p>
+        <p class="view">Where I think this is heading: everyone has access to the same models now, so the model isn't the edge. The edge is the unglamorous stuff around it. What it's allowed to decide, how you know it got it right, and whether it's cheap enough to keep running.</p>
       </div>
     </section>
 
-    <section id="projects" class="section" aria-label="Projects">
-      <h2 class="animated">Fun Projects</h2>
-      <div class="grid">
-        <!-- Project 1 -->
-        <article class="card animated" style="animation-delay: 0.1s;">
-          <div>
-            <h3>UK Loan &amp; Investment Visualizer</h3>
-            <p>A design-first tool that answers a crucial financial question: "Should I overpay my loan or invest the extra cash?"</p>
-          </div>
-          <a class="btn" href="https://sairajesh711.github.io/uk-loan-visualizer/" target="_blank" rel="noopener">Try it →</a>
+    <section id="rules" class="sec" aria-labelledby="rules-h">
+      <div class="side">
+        <h2 id="rules-h">How I build with AI</h2>
+        <p>Rules I've ended up with. Each one came out of a real project, noted on the right.</p>
+      </div>
+      <div class="main">
+        <article class="rule">
+          <h3>The model explains the answer. It doesn't make the numbers.</h3>
+          <p>In FPL Buddy a projection engine decides every transfer and captain pick. The language model gets the engine's stored output and puts it into plain words, and that's all it's allowed to do. There's deliberately no chat box.</p>
+          <cite>FPL Buddy, architecture decision 0004</cite>
         </article>
-        <!-- Project 2 -->
-        <article class="card animated" style="animation-delay: 0.3s;">
-          <div>
-            <h3>AI Itinerary Crafter</h3>
-            <p>A travel co-pilot that helps users build perfect itinerary through a simple UI, turning vague ideas into detailed, personalized plans.</p>
-          </div>
-          <a class="btn" href="https://ai-itinerary-frontend.vercel.app/" target="_blank" rel="noopener">Try it →</a>
+        <article class="rule">
+          <h3>Beat the dumb baseline, or don't ship.</h3>
+          <p>Before a friend saw a single recommendation, the engine had to beat "average of the last five gameweeks" on a replay of the whole 2025/26 season, using only what was known before each deadline. Its captain picks averaged 6.08 points against the baseline's 4.87. The first engine I built got thrown out on the way there.</p>
+          <cite>FPL Buddy, requirement FR-1</cite>
+        </article>
+        <article class="rule">
+          <h3>If a formula will do the job, don't use a model.</h3>
+          <p>The values quiz scores people with a published, deterministic formula that runs in their browser. Nothing is saved or sent anywhere. AI helps draft the questions at build time, and people review them. When someone's politics is on the line, "the model thought so" isn't a good enough answer.</p>
+          <cite>Values quiz, rules 1 and 2</cite>
+        </article>
+        <article class="rule">
+          <h3>AI review is a first pass. People sign off.</h3>
+          <p>I use AI reviewers to catch problems early, and they catch plenty. They never count as approval. The quiz doesn't launch until real people from different parties, faiths and countries have read every question.</p>
+          <cite>Values quiz, rule 6</cite>
+        </article>
+        <article class="rule">
+          <h3>Keep score on your own advice.</h3>
+          <p>Every FPL Buddy recommendation gets stored along with what happened next, including the weeks it told you to save your transfer. The confidence label gets built from that record ("moves like this worked 6 in 10"), so the product can't sound surer than its track record.</p>
+          <cite>FPL Buddy, requirements FR-4 and R4</cite>
         </article>
       </div>
     </section>
 
-    <section id="about" class="section animated" style="animation-delay: 0.4s;" aria-label="About">
-      <h2>My Journey</h2>
-      <div class="journey-container">
-        <div class="journey-tabs">
-          <button class="journey-tab active" data-target="journey-nit">NIT Trichy</button>
-          <div class="journey-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 16L18 12M18 12L14 8M18 12L6 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <button class="journey-tab" data-target="journey-citi">Citi</button>
-          <div class="journey-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 16L18 12M18 12L14 8M18 12L6 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <button class="journey-tab" data-target="journey-iim">IIM Bangalore</button>
-          <div class="journey-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 16L18 12M18 12L14 8M18 12L6 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <button class="journey-tab" data-target="journey-ragaai">RagaAI</button>
-          <div class="journey-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 16L18 12M18 12L14 8M18 12L6 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <button class="journey-tab" data-target="journey-jpmc">JPMorgan Chase</button>
+    <section id="now" class="sec" aria-labelledby="now-h">
+      <div class="side">
+        <h2 id="now-h">Building now</h2>
+        <p>Claude writes most of the code and I make the product calls. On FPL Buddy it also keeps a log of where my product thinking falls short.</p>
+      </div>
+      <div class="main">
+        <article class="proj">
+          <header>
+            <h3>FPL Buddy</h3>
+            <span class="status">Closed beta with friends</span>
+          </header>
+          <p class="what">Fantasy Premier League advice for your actual squad, with an honest sense of how sure it is. Enter your public Team ID and that's it. It never asks for your FPL login.</p>
+          <dl>
+            <dt>The bet</dt>
+            <dd>FPL tools hand you data. What managers actually want is a decision, and quite often the right one is "do nothing this week". Using it should mean showing up before deadlines, not spending more time in the app.</dd>
+            <dt>The AI call</dt>
+            <dd>A point-source projection engine in Python makes every number. The language model only writes short summaries from that engine's stored output. Each engine change is replayed against last season before it goes live.</dd>
+            <dt>Where it stands</dt>
+            <dd>Live since Gameweek 6, rolling out to more friends from Gameweek 11. Runs on Cloud Run, Supabase and Vercel, built to cost close to £0 at friends scale.</dd>
+          </dl>
+          <ul class="facts">
+            <li><strong>965</strong> commits</li>
+            <li><strong>1,800+</strong> tests</li>
+            <li><strong>14</strong> architecture decisions</li>
+          </ul>
+        </article>
+
+        <article class="proj">
+          <header>
+            <h3>Values quiz</h3>
+            <span class="status">Waiting on human review</span>
+          </header>
+          <p class="what">A quiz that shows people, mostly the Indian diaspora, what they actually value, separate from which party they support.</p>
+          <dl>
+            <dt>The bet</dt>
+            <dd>Party loyalty hides what people actually believe. Anyone, from any party or religion, should be just as likely to learn something uncomfortable about themselves. No position gets framed as the smart one.</dd>
+            <dt>The AI call</dt>
+            <dd>No AI at runtime and no storage at all. Every placement is backed by a free, citable source, and if the source doesn't say, the cell says <em>silent</em> rather than guessing.</dd>
+            <dt>Where it stands</dt>
+            <dd>The scoring engine and screens are built. It's waiting for real reviewers across parties before it launches.</dd>
+          </dl>
+          <ul class="facts">
+            <li><strong>435</strong> tests, including neutrality tests</li>
+            <li><strong>0</strong> bytes stored</li>
+          </ul>
+        </article>
+
+        <article class="proj">
+          <header>
+            <h3>Project Architect</h3>
+            <span class="status">Public plugin</span>
+          </header>
+          <p class="what">A Claude Code plugin that interviews you about a project idea, makes the architecture calls, and sets up the repo with lean docs and session-safety rules.</p>
+          <dl>
+            <dt>The bet</dt>
+            <dd>On day one you know the least you'll ever know about your project. Long upfront docs are guesses, and they eat the model's context in every session after. So it records decisions and constraints, and lets the rest grow from real code.</dd>
+            <dt>Where it came from</dt>
+            <dd>More than 40 sessions building a full-stack AI travel app. Each doc it generates is there because something went wrong without it.</dd>
+          </dl>
+          <p class="links">
+            <a href="https://github.com/sairajesh711/project-architect" target="_blank" rel="noopener">See it on GitHub</a>
+            <span><code>/plugin marketplace add sairajesh711/project-architect</code></span>
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="shelf" class="sec" aria-labelledby="shelf-h">
+      <div class="side">
+        <h2 id="shelf-h">Paused, shipped, learned from</h2>
+        <p>Knowing when to stop counts as a product decision too.</p>
+      </div>
+      <div class="main">
+        <ul class="shelf">
+          <li>
+            <span class="name">Overlap<small>Football draft game, paused</small></span>
+            <p>Draft an all-time XI where the score comes from chemistry between players who actually played together, not the sum of their ratings. The market leader has 5.4M players and a leaderboard full of identical maximum scores, because every pick has an obvious right answer. The design and the season simulation are calibrated against real football. It's paused before the build.</p>
+          </li>
+          <li>
+            <span class="name">Vibe Travel<small>Paused</small></span>
+            <p>Turn Instagram travel reels into itineraries you can book. I did the research before building: Expedia already turns Reels into itineraries with Trip Matching, and Instagram's API no longer supports personal accounts. So any version of this needs a much narrower angle than "paste a reel".</p>
+          </li>
+          <li>
+            <span class="name"><a href="https://ai-itinerary-frontend.vercel.app/" target="_blank" rel="noopener">AI Itinerary Crafter</a><small>Live</small></span>
+            <p>For long or multi-city trips it plans the route first, in about five seconds, and then fills in each day. The route and the detail are two separate jobs, so they get two separate passes.</p>
+          </li>
+          <li>
+            <span class="name"><a href="https://sairajesh711.github.io/uk-loan-visualizer/" target="_blank" rel="noopener">UK Loan Visualizer</a><small>Live</small></span>
+            <p>Overpay your loan or invest the money? It compares the two over the same timeframe and works out the return you'd need to break even.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="work" class="sec" aria-labelledby="work-h">
+      <div class="side">
+        <h2 id="work-h">The day job, and how I got here</h2>
+        <p>Engineer first, then product. I still build.</p>
+      </div>
+      <div class="main">
+        <ol class="path">
+          <li>
+            <h3>JPMorgan Chase</h3>
+            <p class="role">Product manager, London</p>
+            <p>The firm's SME for UK Personal Loans. I own the requirements, the test strategy and the payment flows, and I've seen it go from a blank page to its first live release. Before that I helped take the Chase UK credit card through its customer-panel phase.</p>
+            <p>Somewhere in there I started building again. Nobody asked me to. I wanted to know whether models could do the careful, boring parts of the job, like reading regulation or checking that a requirement actually says what it's meant to say. Four are in production now. One came 3rd in our line of business at the firm's AI hackathon, and an Operations team uses a loan simulator I built to settle customer disputes.</p>
+          </li>
+          <li>
+            <h3>RagaAI</h3>
+            <p class="role">Product, part-time during the MBA</p>
+            <p>An AI startup, at startup speed. I did market research, mapped customer journeys and worked on design alongside the team.</p>
+          </li>
+          <li>
+            <h3>IIM Bangalore</h3>
+            <p class="role">MBA</p>
+            <p>Where "how" turned into "why". We finished 2nd runners-up nationally in HUL LIME, out of 20,000+ teams, with a gamified marketing strategy.</p>
+          </li>
+          <li>
+            <h3>Citi</h3>
+            <p class="role">Software developer, three years</p>
+            <p>I built an ML model that prevented more than 100k trade failures, worth an estimated $8M+ a year, plus data visualisation tools for capital markets operations. I also mentored 20+ new hires and ran an internal speaker series on emerging tech that drew 300+ colleagues.</p>
+          </li>
+          <li>
+            <h3>NIT Trichy</h3>
+            <p class="role">Engineering</p>
+            <p>Where I first got hooked on data and ideation contests, and on the idea that tech could be shaped around a problem.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="beyond" class="sec" aria-labelledby="beyond-h">
+      <div class="side">
+        <h2 id="beyond-h">Away from the screen</h2>
+      </div>
+      <div class="main two">
+        <div>
+          <h3>Astrophotography and travel</h3>
+          <p>Zostel's official Instagram featured one of my night-sky shots (485k+ reach). It's where travel, content and storytelling go when they're not going into a PRD.</p>
+          <p><a href="https://www.instagram.com/sairajeshexplores" target="_blank" rel="noopener">@sairajeshexplores on Instagram</a></p>
         </div>
-        <div class="journey-content">
-          <div id="journey-nit" class="journey-step active">
-            <h3>The Spark: Engineering & Ideation</h3>
-            <p>My path into product began not in a business school, but during my engineering studies at <strong>NIT Trichy</strong>, fascinated by data, technology, and participating in ideation contests. This was my first taste of how technology could be shaped to solve interesting problems.</p>
-          </div>
-          <div id="journey-citi" class="journey-step">
-            <h3>The Foundation: Building at Scale</h3>
-            <p>This curiosity led me to <strong>Citi</strong>, where I spent three years as a software developer. I moved from theory to practice, building an ML model that prevented over 100k trade failures (saving an estimated <strong>$8M+ annually</strong>) and developing data visualization tools for capital markets operations. This experience taught me how to translate complex technical solutions into tangible business impact.</p>
-          </div>
-          <div id="journey-iim" class="journey-step">
-            <h3>The Bridge: From "How" to "Why"</h3>
-            <p>While I loved the technical challenge, I was driven to get closer to the "why." This led me to an MBA at <strong>IIM Bangalore</strong>. There, I honed my strategic thinking in national competitions, placing <strong>2nd runners-up nationally in HUL LIME</strong> — 2 of 20,000+ teams — with a gamified marketing strategy. I learned to build the strategic bridge between code and customer.</p>
-          </div>
-          <div id="journey-ragaai" class="journey-step">
-            <h3>The Accelerator: Startup Agility</h3>
-            <p>While pursuing my MBA, I worked part-time at the AI startup <strong>RagaAI</strong>, juggling academic work with real-world product challenges. I learned to operate with speed and agility—conducting market research, mapping customer journeys, and collaborating on design in a fast-paced environment.</p>
-          </div>
-          <div id="journey-jpmc" class="journey-step">
-            <h3>The Synthesis: Enterprise Impact</h3>
-            <p>Today I'm a product manager at <strong>JPMorgan Chase</strong> in London and the firm's SME for UK Personal Loans — I own the requirements, the test strategy and the payment flows, and I've watched the thing go from a blank page to its first live release. Before that I helped get the Chase UK credit card through its customer-panel phase.</p>
-            <p>Somewhere in there I started building again. Nobody asked me to. I wanted to know whether these models could do the careful, boring parts of the job — reading regulation, checking that a requirement actually says what it's meant to say — so I built the things and found out. Four are in production now, one placed <strong>3rd in our line of business at the firm's AI hackathon</strong>, and an Operations team uses a loan simulator I built to settle customer disputes. The part I care about most is making them cheap enough to keep running.</p>
-          </div>
+        <div>
+          <h3>Mentoring</h3>
+          <p>I mentor new analysts at JPMorgan Chase, and I did the same for more than 20 new hires at Citi.</p>
         </div>
-      </div>
-      <div class="grid" style="margin-top: var(--s12);">
-        <article class="card animated" style="animation-delay: 0.5s;">
-            <h3>Mentorship & Leadership</h3>
-            <p>I'm passionate about helping others grow. I currently mentor new analysts at <strong>JPMorgan Chase</strong>, and previously mentored over 20 new hires at <strong>Citi</strong>. While at Citi, I also spearheaded an internal speaker series on emerging tech, drawing audiences of over 300 colleagues.</p>
-        </article>
-        <article class="card animated" style="animation-delay: 0.6s;">
-            <h3>Beyond the PRD</h3>
-            <p>When I'm not deep in product specs, I'm probably planning my next trip. My passion for astrophotography was even featured on <strong>Zostel's official Instagram page</strong> (485k+ reach). It's my creative outlet for travel, content creation, and storytelling.</p>
-            <a class="btn" href="https://www.instagram.com/sairajeshexplores" target="_blank" rel="noopener">Follow on Instagram →</a>
-        </article>
       </div>
     </section>
 
-    <section id="contact" class="section animated" style="animation-delay: 0.7s;" aria-label="Contact">
-      <h2>Get in Touch</h2>
-      <div class="grid">
-        <article class="card">
-          <h3>Email</h3>
-          <p>The best way to reach me for any inquiries or collaborations.</p>
-          <a class="btn" href="mailto:sairajesh711@gmail.com">sairajesh711@gmail.com →</a>
-        </article>
-        <article class="card">
-          <h3>Resume</h3>
-          <p>For a more detailed look at my professional experience, feel free to view my resume.</p>
-          <a class="btn" href="./Sai_Rajesh_Donkana_CV.pdf" target="_blank" rel="noopener">View CV →</a>
-        </article>
+    <section id="contact" class="sec" aria-labelledby="contact-h">
+      <div class="side">
+        <h2 id="contact-h">Contact</h2>
+        <p>Happy to talk AI product strategy, lending, or whether your idea needs a model at all.</p>
+      </div>
+      <div class="main">
+        <p class="reach"><a href="mailto:sairajesh711@gmail.com">sairajesh711@gmail.com</a></p>
+        <p class="elsewhere">
+          <a href="https://www.linkedin.com/in/sairajeshdonkana" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/sairajesh711" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://x.com/iamsairajesh711" target="_blank" rel="noopener">X</a>
+        </p>
       </div>
     </section>
   </main>
 
-  <footer class="animated" style="animation-delay: 0.8s;">
-    <div class="container footer-content">
-      <small>© <span id="year"></span> Sai Rajesh Donkana • London</small>
-      <div class="footer-links">
-        <a href="https://github.com/sairajesh711" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://www.linkedin.com/in/sairajeshdonkana" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://x.com/iamsairajesh711" target="_blank" rel="noopener">X</a>
-      </div>
-    </div>
+  <footer>
+    <div class="wrap">© <span id="year">2026</span> Sai Rajesh Donkana, London</div>
   </footer>
 
-  <!-- Core application scripts -->
   <script defer src="/js/app.js"></script>
   <script defer src="/js/analytics.js"></script>
-
-  <!-- GoatCounter configuration and loader -->
-  <script>
-    window.goatcounter = window.goatcounter || {};
-    window.goatcounter.allow_local = false; 
-  </script>
-  <script data-goatcounter="https://sairajesh711.goatcounter.com/count"
-          async src="https://gc.zgo.at/count.js"></script>
+  <script data-goatcounter="https://sairajesh711.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
   <noscript><img src="https://sairajesh711.goatcounter.com/count?p=/noscript" alt="" /></noscript>
 </body>
 </html>
