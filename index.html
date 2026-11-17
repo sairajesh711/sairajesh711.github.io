@@ -227,6 +227,9 @@
     .card code{ font-family: var(--font-sans); font-size:13px; background:color-mix(in oklab, var(--border) 60%, transparent); padding:2px 6px; border-radius:6px; word-break:break-all; }
     .card .actions{ display:flex; flex-direction:column; gap: var(--s3); }
     .card.wide{ grid-column: 1 / -1; }
+    .card .feature-list{ margin: 0 0 var(--s4); padding-left: 20px; color: var(--muted); font-size: 15px; }
+    .card .feature-list li{ margin-bottom: var(--s2); }
+    .card .feature-list strong{ color: var(--fg); font-weight: 500; }
     #pm .grid, #ai .grid{ grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); }
     .hero-cta{ display:flex; gap: var(--s3); justify-content:center; flex-wrap:wrap; margin-top: var(--s6); }
     .hero-cta .btn{ align-self:auto; }
@@ -405,11 +408,12 @@
       <h2 class="animated">Side Projects</h2>
       <p class="intro animated">Where I'm the PM and the designer, and with AI, the engineer too.</p>
       <div class="grid">
-        <article class="card animated" style="animation-delay: 0.1s;">
+        <article class="card wide animated" style="animation-delay: 0.1s;">
           <div>
             <span class="tag">Live with beta users</span>
             <h3>FPL Buddy</h3>
-            <p>An AI adviser for Fantasy Premier League that gives advice for your actual squad, plainly, with an honest sense of how sure it is. I run it like a real product: research with users, prioritisation, a staged rollout with a quality bar, and checking how its advice actually performed.</p>
+            <p>Fantasy Premier League managers don't need more stats. They need to know what to do with their own team this week. FPL Buddy is a data product built for that decision. Its own data pipeline and projection engine look at your actual team, then tell you the best line-up, who to captain, whether a transfer is worth making, and where you stand against your mini-league rivals. Chip strategy is on the way.</p>
+            <p>The engine produces every number and was tested against real past seasons before anyone used it. The advice is checked against what actually happened, and it's honest about how sure it is.</p>
           </div>
         </article>
         <article class="card animated" style="animation-delay: 0.2s;">
@@ -435,7 +439,7 @@
           </div>
           <a class="btn" href="https://ai-itinerary-frontend.vercel.app/" target="_blank" rel="noopener">Try it →</a>
         </article>
-        <article class="card wide animated" style="animation-delay: 0.4s;">
+        <article class="card animated" style="animation-delay: 0.4s;">
           <div>
             <span class="tag">Live</span>
             <h3>UK Loan &amp; Investment Visualizer</h3>
