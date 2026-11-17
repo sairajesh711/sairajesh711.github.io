@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Sai Rajesh Donkana — AI PM × FinTech</title>
+  <title>Sai Rajesh Donkana — AI Product Strategy × FinTech</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="AI Product Manager in London. Owns UK lending products at Chase UK and builds agentic AI workflows — context engineering, evals, and small, legible projects." />
+  <meta name="description" content="AI product manager in London. SME for UK Personal Loans at JPMorgan Chase. Builds AI products that are strict about where the model belongs, and lean on tokens." />
   <meta name="theme-color" content="#ffffff" />
 
   <!-- Google Fonts: Space Grotesk -->
@@ -17,8 +17,8 @@
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Sai Rajesh Donkana — AI PM × FinTech" />
-  <meta property="og:description" content="Minimal portfolio linking passion projects: UK Loan & Investment Visualizer and AI Itinerary Crafter." />
+  <meta property="og:title" content="Sai Rajesh Donkana — AI Product Strategy × FinTech" />
+  <meta property="og:description" content="Empathetic products, sustainable strategy, technical depth. What I'm building: FPL Buddy, a values quiz and Project Architect." />
   <meta property="og:url" content="https://sairajesh711.github.io" />
   <meta property="og:image" content="https://sairajesh711.github.io/og-banner.png" />
 
@@ -44,8 +44,8 @@
     default-src 'self';
     img-src 'self' https://*.goatcounter.com data:;
     script-src 'self' https://gc.zgo.at https://*.goatcounter.com
-      'sha256-lh0l56vi0+nTvjVG7nM15olbVCpoctPJp3UrMGh2rcA='
-      'sha256-oQy6tiUAHJkBbDoBiZXfHcOrvkrWehghuIbhd5iyglo=';
+      'sha256-LskTwHmRLKss4o/6k2TH13+ETBSFPfFmssFAzwkus68='
+      'sha256-lh0l56vi0+nTvjVG7nM15olbVCpoctPJp3UrMGh2rcA=';
     style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
     font-src https://fonts.gstatic.com;
     connect-src https://sairajesh711.goatcounter.com;
@@ -87,7 +87,7 @@
     header, main, footer{ width:100% }
     header{ position:sticky; top:0; z-index: 10; backdrop-filter:saturate(180%) blur(6px); background:color-mix(in oklab, var(--bg) 85%, transparent); border-bottom:1px solid var(--border); }
     nav{ display:flex; align-items:center; justify-content:space-between; gap:var(--s4); max-width:var(--max); margin:0 auto; padding: var(--s3) var(--s6); }
-    nav a{ padding: var(--s2) var(--s3); border-radius:10px; font-weight: 500; }
+    nav a{ padding: var(--s2) var(--s3); border-radius:10px; font-weight: 500; white-space: nowrap; }
     nav a:focus-visible{ outline:2px solid var(--brand); outline-offset:2px }
     @media (max-width: 640px) {
       nav {
@@ -216,6 +216,17 @@
       font-size: 20px;
     }
 
+    /* ---- Section intro, status tags, sources ---- */
+    .section .intro{ text-align:center; color:var(--muted); max-width:620px; margin: calc(-1 * var(--s6)) auto var(--s8); }
+    .card .tag{ display:inline-block; font-size:13px; font-weight:500; color:var(--brand); border:1px solid color-mix(in oklab, var(--brand) 40%, transparent); border-radius:999px; padding:2px var(--s3); margin-bottom: var(--s3); }
+    .card .source{ font-size:13px; color:var(--muted); margin:0; padding-top: var(--s3); border-top:1px solid var(--border); }
+    .card .facts{ font-size:14px; color:var(--muted); margin: 0 0 var(--s4); }
+    .card .facts strong{ color:var(--fg); }
+    .card code{ font-family: var(--font-sans); font-size:13px; background:color-mix(in oklab, var(--border) 60%, transparent); padding:2px 6px; border-radius:6px; word-break:break-all; }
+    .card .actions{ display:flex; flex-direction:column; gap: var(--s3); }
+    .card.wide{ grid-column: 1 / -1; }
+    .subhead{ text-align:center; font-size:18px; font-weight:500; color:var(--muted); margin: var(--s12) 0 var(--s6); }
+
     /* ---- Footer ---- */
     footer{ border-top:1px solid var(--border); }
     .footer-content { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--s4); }
@@ -238,6 +249,7 @@
     <nav>
       <strong><a href="/">Sai Rajesh Donkana</a></strong>
       <div>
+        <a href="#ai">AI Rules</a>
         <a href="#projects">Projects</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
@@ -248,34 +260,129 @@
   <main id="main" class="container">
     <section class="hero animated" aria-label="Intro">
       <div class="hero-background-text" aria-hidden="true">
-        <span>AI · Tech · FinTech · Empathy · Strategy ·</span>
-        <span>AI · Tech · FinTech · Empathy · Strategy ·</span>
+        <span>AI · Tech · FinTech · Empathy · Strategy · Sustainability ·</span>
+        <span>AI · Tech · FinTech · Empathy · Strategy · Sustainability ·</span>
       </div>
       <div class="hero-content">
-        <span class="pill">AI Product Manager with a FinTech Background</span>
+        <span class="pill">AI Product Strategist &amp; Product Manager · FinTech · London</span>
         <h1>Empathetic Products. Sustainable Strategy. Technical Depth.</h1>
-        <p>I started in engineering, got restless about why we were building things rather than how, and ended up in product. I still build things myself — it's the quickest way to find out whether an idea is any good. Outside work it's travel and astrophotography, which is the same itch pointed at a darker sky.</p>
+        <p>I started in engineering, got restless about why we were building things rather than how, and ended up in product. These days most of that restlessness goes into one question: where does AI actually belong in a product, and where doesn't it? I still build things myself — it's the quickest way to find out whether an idea is any good. Outside work it's travel and astrophotography, which is the same itch pointed at a darker sky.</p>
+      </div>
+    </section>
+
+    <section id="ai" class="section" aria-label="How I work with AI">
+      <h2 class="animated">How I Work with AI</h2>
+      <p class="intro animated">More done with less. Every rule here came out of something I built.</p>
+      <div class="grid">
+        <article class="card animated" style="animation-delay: 0.1s;">
+          <div>
+            <h3>The model explains. It doesn't make the numbers.</h3>
+            <p>In FPL Buddy a projection engine decides every pick. The language model only puts the engine's stored output into plain words. There's deliberately no chat box.</p>
+          </div>
+          <p class="source">FPL Buddy, architecture decision 0004</p>
+        </article>
+        <article class="card animated" style="animation-delay: 0.15s;">
+          <div>
+            <h3>Beat the simple baseline, or don't ship.</h3>
+            <p>Before a friend saw a single recommendation, the engine had to beat "average of the last five gameweeks" on a replay of the whole 2025/26 season. Its captain picks averaged 6.08 points against the baseline's 4.87.</p>
+          </div>
+          <p class="source">FPL Buddy, requirement FR-1</p>
+        </article>
+        <article class="card animated" style="animation-delay: 0.2s;">
+          <div>
+            <h3>Count the tokens.</h3>
+            <p>Productivity and efficiency go together. FPL Buddy's language model runs on a £10-a-month budget, and Project Architect keeps day-one docs to around 300 lines so the model's context goes on real work, not guesses.</p>
+          </div>
+          <p class="source">FPL Buddy LLM budget; Project Architect context budget</p>
+        </article>
+        <article class="card animated" style="animation-delay: 0.25s;">
+          <div>
+            <h3>If a formula will do, don't use a model.</h3>
+            <p>The values quiz scores people with a published formula that runs in their browser. Nothing is saved or sent anywhere. AI helps draft questions at build time, and people review them.</p>
+          </div>
+          <p class="source">Values quiz, rules 1 and 2</p>
+        </article>
+        <article class="card animated" style="animation-delay: 0.3s;">
+          <div>
+            <h3>AI review is a first pass. People sign off.</h3>
+            <p>AI reviewers catch plenty early on, but they never count as approval. The quiz waits for real reviewers from different parties, faiths and countries.</p>
+          </div>
+          <p class="source">Values quiz, rule 6</p>
+        </article>
+        <article class="card animated" style="animation-delay: 0.35s;">
+          <div>
+            <h3>Keep score on your own advice.</h3>
+            <p>Every FPL Buddy recommendation is stored with what happened next, including the weeks it said "save your transfer", so the product can't sound surer than its track record.</p>
+          </div>
+          <p class="source">FPL Buddy, requirements FR-4 and R4</p>
+        </article>
       </div>
     </section>
 
     <section id="projects" class="section" aria-label="Projects">
-      <h2 class="animated">Fun Projects</h2>
+      <h2 class="animated">What I'm Building</h2>
+      <p class="intro animated">Claude writes most of the code; I make the product calls. On FPL Buddy it also keeps a log of where my product thinking falls short.</p>
       <div class="grid">
-        <!-- Project 1 -->
         <article class="card animated" style="animation-delay: 0.1s;">
           <div>
+            <span class="tag">Closed beta with friends</span>
+            <h3>FPL Buddy</h3>
+            <p>Fantasy Premier League advice for your actual squad, with an honest sense of how sure it is. Enter your public Team ID; it never asks for your FPL login. Quite often the right advice is "do nothing this week", and it says so.</p>
+            <p class="facts"><strong>965</strong> commits · <strong>1,800+</strong> tests · <strong>14</strong> architecture decisions · built to cost close to £0 at friends scale</p>
+          </div>
+        </article>
+        <article class="card animated" style="animation-delay: 0.2s;">
+          <div>
+            <span class="tag">Waiting on human review</span>
+            <h3>Values Quiz</h3>
+            <p>Shows people, mostly the Indian diaspora, what they actually value, separate from which party they support. Anyone, from any side, should be just as likely to learn something uncomfortable. No AI at runtime, nothing stored, every placement sourced.</p>
+            <p class="facts"><strong>435</strong> tests, including neutrality tests</p>
+          </div>
+        </article>
+        <article class="card wide animated" style="animation-delay: 0.3s;">
+          <div>
+            <span class="tag">Public plugin</span>
+            <h3>Project Architect</h3>
+            <p>A Claude Code plugin that interviews you about a project, makes the architecture calls and sets up the repo with lean docs. It came out of 40+ sessions building an AI travel app; each doc it writes is there because something went wrong without it.</p>
+          </div>
+          <div class="actions">
+            <code>/plugin marketplace add sairajesh711/project-architect</code>
+            <a class="btn" href="https://github.com/sairajesh711/project-architect" target="_blank" rel="noopener">View Repo →</a>
+          </div>
+        </article>
+      </div>
+
+      <h3 class="subhead animated">Fun Projects, Shipped and Paused</h3>
+      <div class="grid">
+        <article class="card animated" style="animation-delay: 0.1s;">
+          <div>
+            <span class="tag">Paused</span>
+            <h3>Overlap</h3>
+            <p>A football draft game where team strength comes from chemistry between players who actually played together, not the sum of their ratings. The design and season simulation are calibrated, and the engine skeleton is in place. It's paused there.</p>
+          </div>
+        </article>
+        <article class="card animated" style="animation-delay: 0.15s;">
+          <div>
+            <span class="tag">Paused</span>
+            <h3>Vibe Travel</h3>
+            <p>Instagram travel reels into bookable itineraries. Research before building showed Expedia already does this with Trip Matching, and Instagram's API no longer supports personal accounts, so it needs a much narrower angle.</p>
+          </div>
+        </article>
+        <article class="card animated" style="animation-delay: 0.2s;">
+          <div>
+            <span class="tag">Live</span>
+            <h3>AI Itinerary Crafter</h3>
+            <p>A travel co-pilot that helps users build a perfect itinerary through a simple UI, turning vague ideas into detailed, personalised plans. Long trips get the route planned first, then the days.</p>
+          </div>
+          <a class="btn" href="https://ai-itinerary-frontend.vercel.app/" target="_blank" rel="noopener">Try it →</a>
+        </article>
+        <article class="card animated" style="animation-delay: 0.25s;">
+          <div>
+            <span class="tag">Live</span>
             <h3>UK Loan &amp; Investment Visualizer</h3>
             <p>A design-first tool that answers a crucial financial question: "Should I overpay my loan or invest the extra cash?"</p>
           </div>
           <a class="btn" href="https://sairajesh711.github.io/uk-loan-visualizer/" target="_blank" rel="noopener">Try it →</a>
-        </article>
-        <!-- Project 2 -->
-        <article class="card animated" style="animation-delay: 0.3s;">
-          <div>
-            <h3>AI Itinerary Crafter</h3>
-            <p>A travel co-pilot that helps users build perfect itinerary through a simple UI, turning vague ideas into detailed, personalized plans.</p>
-          </div>
-          <a class="btn" href="https://ai-itinerary-frontend.vercel.app/" target="_blank" rel="noopener">Try it →</a>
         </article>
       </div>
     </section>
@@ -314,16 +421,22 @@
           <div id="journey-jpmc" class="journey-step">
             <h3>The Synthesis: Enterprise Impact</h3>
             <p>Today I'm a product manager at <strong>JPMorgan Chase</strong> in London and the firm's SME for UK Personal Loans — I own the requirements, the test strategy and the payment flows, and I've watched the thing go from a blank page to its first live release. Before that I helped get the Chase UK credit card through its customer-panel phase.</p>
-            <p>Somewhere in there I started building again. Nobody asked me to. I wanted to know whether these models could do the careful, boring parts of the job — reading regulation, checking that a requirement actually says what it's meant to say — so I built the things and found out. Four are in production now, one placed <strong>3rd in our line of business at the firm's AI hackathon</strong>, and an Operations team uses a loan simulator I built to settle customer disputes. The part I care about most is making them cheap enough to keep running.</p>
+            <p>Somewhere in there I started building again. Nobody asked me to. I wanted to know whether these models could do the careful, boring parts of the job — reading regulation, checking that a requirement actually says what it's meant to say — so I built the tools and found out. More and more people use them now, and I'm working on turning them into official use cases and tools for users. One placed <strong>3rd in our line of business at the firm's AI hackathon</strong>, and an Operations team uses a loan simulator I built to settle customer disputes. The part I care about most is making them cheap enough to keep running.</p>
           </div>
         </div>
       </div>
       <div class="grid" style="margin-top: var(--s12);">
+        <article class="card animated" style="animation-delay: 0.45s;">
+          <div>
+            <h3>Sustainability</h3>
+            <p>I'd rather cycle to work, I plant trees, and I keep an eye on the tokens I use. It's the same idea everywhere: get more done with less.</p>
+          </div>
+        </article>
         <article class="card animated" style="animation-delay: 0.5s;">
             <h3>Mentorship & Leadership</h3>
             <p>I'm passionate about helping others grow. I currently mentor new analysts at <strong>JPMorgan Chase</strong>, and previously mentored over 20 new hires at <strong>Citi</strong>. While at Citi, I also spearheaded an internal speaker series on emerging tech, drawing audiences of over 300 colleagues.</p>
         </article>
-        <article class="card animated" style="animation-delay: 0.6s;">
+        <article class="card wide animated" style="animation-delay: 0.6s;">
             <h3>Beyond the PRD</h3>
             <p>When I'm not deep in product specs, I'm probably planning my next trip. My passion for astrophotography was even featured on <strong>Zostel's official Instagram page</strong> (485k+ reach). It's my creative outlet for travel, content creation, and storytelling.</p>
             <a class="btn" href="https://www.instagram.com/sairajeshexplores" target="_blank" rel="noopener">Follow on Instagram →</a>
@@ -340,9 +453,9 @@
           <a class="btn" href="mailto:sairajesh711@gmail.com">sairajesh711@gmail.com →</a>
         </article>
         <article class="card">
-          <h3>Resume</h3>
-          <p>For a more detailed look at my professional experience, feel free to view my resume.</p>
-          <a class="btn" href="./Sai_Rajesh_Donkana_CV.pdf" target="_blank" rel="noopener">View CV →</a>
+          <h3>LinkedIn</h3>
+          <p>For a more detailed look at my professional experience.</p>
+          <a class="btn" href="https://www.linkedin.com/in/sairajeshdonkana" target="_blank" rel="noopener">View Profile →</a>
         </article>
       </div>
     </section>
