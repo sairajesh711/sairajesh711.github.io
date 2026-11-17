@@ -37,12 +37,21 @@ function gcEvent(path, title, referrer) {
 
 document.addEventListener('DOMContentLoaded', () => {
   gcReady(() => {
-    // Track project and live-demo link clicks
-    document.querySelectorAll('.proj a, .shelf a').forEach(link => {
+    // Track journey tab interactions
+    document.querySelectorAll('.journey-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        const tabText = tab.textContent?.trim() || tab.dataset.target || 'Unknown Tab';
+        gcEvent('/event/journey-tab', `Journey Tab: ${tabText}`);
+      });
+    });
+
+    // Track project CTA clicks (GitHub repo buttons)
+    document.querySelectorAll('.card a.btn').forEach(link => {
       link.addEventListener('click', () => {
-        const block = link.closest('.proj, li');
-        const name = block?.querySelector('h3, .name')?.childNodes[0]?.textContent?.trim() || 'Unknown Project';
-        gcEvent('/event/cta-click', `${name}: ${link.textContent?.trim() || 'link'}`, link.href);
+        const card = link.closest('.card');
+        const projectTitle = card?.querySelector('h3')?.textContent?.trim() || 'Unknown Project';
+        const linkText = link.textContent?.trim() || 'CTA Click';
+        gcEvent('/event/cta-click', `${projectTitle}: ${linkText}`, link.href);
       });
     });
 
